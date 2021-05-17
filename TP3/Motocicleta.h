@@ -9,6 +9,8 @@ class Motocicleta :
     float precioOpcional;
     //ponemos precio base como atributo?
 public:
+    Motocicleta(int numeroPatente, string color, int numeroChasis, int numeroPoliza,
+        tm FechaUltMantenimiento, float precioDia, int capacidad, int casco, float precioOpcional);
     virtual void PasosMantenimiento();
     float CalcularTarifa();
 };
