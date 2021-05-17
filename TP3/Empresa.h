@@ -10,7 +10,7 @@ class Empresa
 {
 	cListaT<Vehiculo> *ListaVehiculos;
 	cListaT<Clientes> *ListaClientes;
-	cListaDeriv<Alquiler> *ListaAlquileres;
+	cListaDeriv*ListaAlquileres;
 	//Alquiler** ListaAlquileres;
 	int CA_alquileres;
 	int TAM_alquileres;

@@ -1,5 +1,13 @@
 #include "Empresa.h"
 
+Empresa::Empresa()
+{
+}
+
+Empresa::~Empresa()
+{
+}
+
 void Empresa::Alquilar(Clientes* cliente)
 {
 	// se agrega  un alquiler a la lista de alquileres.

@@ -1,5 +1,14 @@
 #include "Trafic.h"
 
+Trafic::Trafic(int numeroPatente, string color, int numeroChasis, int numeroPoliza, tm FechaUltMantenimiento, float precioDia, int capacidad):Vehiculo(numeroPatente, color, numeroChasis, numeroPoliza,
+    FechaUltMantenimiento, precioDia, capacidad)
+{
+    this->silladeseguridad=silladeseguridad;
+    this->asientorebatible=asientorebatible;
+    this-> precioSillaSeg=precioSillaSeg;
+    this-> precioAsiento=precioAsiento;
+}
+
 void Trafic::PasosMantenimiento()
 {
 }

@@ -156,6 +156,7 @@
     <ClCompile Include="Automovil.cpp" />
     <ClCompile Include="Camioneta.cpp" />
     <ClCompile Include="Clientes.cpp" />
+    <ClCompile Include="cListaDeriv.cpp" />
     <ClCompile Include="Empresa.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Motocicleta.cpp" />

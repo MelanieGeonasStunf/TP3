@@ -11,6 +11,8 @@ class Trafic :
     float precioAsiento;
 
 public:
+    Trafic(int numeroPatente, string color, int numeroChasis, int numeroPoliza, tm FechaUltMantenimiento, float precioDia, int capacidad);
+
     virtual void PasosMantenimiento();
     float CalcularTarifa();
 };
