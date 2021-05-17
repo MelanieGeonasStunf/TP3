@@ -139,15 +139,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Alquiler.h" />
     <ClInclude Include="Automovil.h" />
     <ClInclude Include="Camioneta.h" />
+    <ClInclude Include="Clientes.h" />
+    <ClInclude Include="cListaT.h" />
+    <ClInclude Include="Empresa.h" />
+    <ClInclude Include="Librerias.h" />
     <ClInclude Include="Motocicleta.h" />
     <ClInclude Include="Trafic.h" />
     <ClInclude Include="Vehiculo.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Alquiler.cpp" />
     <ClCompile Include="Automovil.cpp" />
     <ClCompile Include="Camioneta.cpp" />
+    <ClCompile Include="Clientes.cpp" />
+    <ClCompile Include="Empresa.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Motocicleta.cpp" />
     <ClCompile Include="Trafic.cpp" />
     <ClCompile Include="Vehiculo.cpp" />
