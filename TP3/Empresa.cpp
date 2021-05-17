@@ -9,6 +9,7 @@ void Empresa::Alquilar(Clientes* cliente)
 	}
 	ListaAlquileres[CA_alquileres]= AgregarItem<Alquiler>(cliente);
 	
+	
 }
 
 void Empresa::Adquirir()

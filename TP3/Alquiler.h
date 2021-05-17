@@ -11,6 +11,7 @@ class Alquiler
 	tm FechaInicio;
 	tm FechaFin;
 	float monto;
+	const
 public:
 	
 };

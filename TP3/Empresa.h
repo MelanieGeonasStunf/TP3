@@ -5,11 +5,12 @@
 #include "Alquiler.h"
 
 
+
 class Empresa
 {
 	cListaT<Vehiculo> *ListaVehiculos;
 	cListaT<Clientes> *ListaClientes;
-	cListaT<Alquiler> *ListaAlquileres;
+	cListaDeriv<Alquiler> *ListaAlquileres;
 	//Alquiler** ListaAlquileres;
 	int CA_alquileres;
 	int TAM_alquileres;

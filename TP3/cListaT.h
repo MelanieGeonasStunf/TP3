@@ -53,6 +53,7 @@ unsigned int cListaT<T>::getCA()
 template<class T>
 void cListaT<T>::Redimensionalizar()
 {
+	////
 }
 
 template<class T>
