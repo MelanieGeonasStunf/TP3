@@ -5,7 +5,7 @@ Camioneta::Camioneta(int numeroPatente, string color, int numeroChasis, int nume
 {
     this->silladeseguridad = silladeseguridad;
     this->portaequipaje = portaequipaje;
-    this - ´precioSillaSeg = precioSillaSeg;
+    this->precioSillaSeg = precioSillaSeg;
     this->precioPortaEquip = precioPortaEquip;
 }
 

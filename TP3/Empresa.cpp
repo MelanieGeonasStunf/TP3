@@ -30,6 +30,7 @@ void Empresa::Adquirir(Vehiculo* vehiculo)
 void Empresa::Retirar(Vehiculo* vehiculo)
 {
 	// quita vehiculo lista vehiculos
+	ListaVehiculos[CA_vehiculos].Quitar(vehiculo); //quitar o eliminar?
 }
 
 void Empresa::Mantenimiento(Vehiculo* vehiculo)

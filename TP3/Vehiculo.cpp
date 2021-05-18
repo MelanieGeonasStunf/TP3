@@ -15,7 +15,7 @@ Vehiculo::~Vehiculo()
 {
 }
 
-void Vehiculo::CalcularTarifa()
+float Vehiculo::CalcularTarifa()
 {
 	/*
 	if-> auto
