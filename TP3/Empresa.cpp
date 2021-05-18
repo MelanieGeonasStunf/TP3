@@ -20,17 +20,17 @@ void Empresa::Alquilar(Clientes* cliente)
 	
 }
 
-void Empresa::Adquirir()
+void Empresa::Adquirir(Vehiculo* vehiculo)
 {
 	// agrega un vehiculo lista vehiculos
 }
 
-void Empresa::Retirar()
+void Empresa::Retirar(Vehiculo* vehiculo)
 {
 	// quita vehiculo lista vehiculos
 }
 
-void Empresa::Mantenimiento()
+void Empresa::Mantenimiento(Vehiculo* vehiculo)
 {
 	//llama a la funcion de mantenimiento de cada vehiculo
 }

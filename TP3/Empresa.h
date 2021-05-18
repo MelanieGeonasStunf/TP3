@@ -19,8 +19,8 @@ public:
 	Empresa();
 	~Empresa();
 	void Alquilar(Clientes* cliente);
-	void Adquirir();
-	void Retirar();
-	void Mantenimiento();
+	void Adquirir(Vehiculo* vehiculo);
+	void Retirar(Vehiculo* vehiculo);
+	void Mantenimiento(Vehiculo* vehiculo);
 };
 

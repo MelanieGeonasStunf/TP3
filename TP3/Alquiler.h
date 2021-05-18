@@ -17,5 +17,3 @@ public:
 
 	const int getcodigo();
 };
-
-//HOLA
