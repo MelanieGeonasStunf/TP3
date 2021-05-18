@@ -7,6 +7,14 @@ Motocicleta::Motocicleta(int numeroPatente, string color, int numeroChasis, int 
     this->precioOpcional = precioOpcional;
 }
 
+Motocicleta::~Motocicleta()
+{
+}
+
+void Motocicleta::PasosMantenimiento()
+{
+}
+
 float Motocicleta::CalcularTarifa()
 {
     float precioMoto = precioDia;

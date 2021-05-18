@@ -5,6 +5,7 @@
 
 class Alquiler
 {
+	friend class cListaDeriv;
 	Clientes* cliente;
 	Vehiculo* vehiculo;
 	int elementosAdicionales;

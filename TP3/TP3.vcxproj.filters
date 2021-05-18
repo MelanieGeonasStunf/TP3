@@ -56,9 +56,6 @@
     <ClCompile Include="Motocicleta.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Automovil.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Camioneta.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -79,6 +76,9 @@
     </ClCompile>
     <ClCompile Include="cListaDeriv.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Automovil.cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
