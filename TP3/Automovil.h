@@ -10,5 +10,7 @@ class Automovil :
 public:
 	virtual void PasosMantenimiento();
 	float CalcularTarifa();
+	
+
 };
 

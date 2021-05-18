@@ -37,6 +37,10 @@ public:
 
 	unsigned int getCA();
 	unsigned int getTAM();
+
+	void operator+(T* miObjeto);
+	//istream& operator<<( )
+	T* operator[](unsigned int pos);
 };
 
 template<class T>
@@ -44,6 +48,9 @@ unsigned int cListaT<T>::getTAM()
 {
 	return TAM;
 }
+
+
+
 template<class T>
 unsigned int cListaT<T>::getCA()
 {
@@ -97,7 +104,7 @@ void cListaT<T>::Listar()
 }
 
 template<class T>
-bool cListaT<T>::AgregarItem(T * item,int CA,int TAM)
+bool cListaT<T>::AgregarItem(T * item)
 {
 
 	T *i_f = BuscarItem(item->getclave());
@@ -209,4 +216,17 @@ unsigned int cListaT<T>::getItemPos(string clave)
 
 	return INT_MAX;
 }
+
+template<class T>
+inline void cListaT<T>::operator+(T* miObjeto)
+{
+	bool ok = AgregarItem(miObjeto);
+}
+
+template<class T>
+inline T* cListaT<T>::operator[](unsigned int pos)
+{
+	return getItem(pos);
+}
+
 
