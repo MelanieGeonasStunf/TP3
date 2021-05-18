@@ -12,6 +12,7 @@ class Alquiler
 	tm FechaFin;
 	float monto;
 	const int codigo;
+
 public:
 	const int getcodigo();
 };

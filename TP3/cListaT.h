@@ -97,7 +97,7 @@ void cListaT<T>::Listar()
 }
 
 template<class T>
-bool cListaT<T>::AgregarItem(T * item)
+bool cListaT<T>::AgregarItem(T * item,int CA,int TAM)
 {
 
 	T *i_f = BuscarItem(item->getclave());

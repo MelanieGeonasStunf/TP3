@@ -1,20 +1,17 @@
 #include "Empresa.h"
 
+//dejarlo para cuando sepamos usar lista template
 void Empresa::Alquilar(Clientes* cliente)
 {
 	// se agrega  un alquiler a la lista de alquileres.
-	if (CA_alquileres == TAM_alquileres)
-	{
-		//redimensionar!
-	}
-	ListaAlquileres[CA_alquileres]= AgregarItem<Alquiler>(cliente);
-	
-	
+	bool ok;
+	ok = AgregarItem <Alquiler> (cliente);		
 }
 
 void Empresa::Adquirir()
 {
 	// agrega un vehiculo lista vehiculos
+
 }
 
 void Empresa::Retirar()
