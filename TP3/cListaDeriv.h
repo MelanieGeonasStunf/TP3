@@ -2,14 +2,12 @@
 #include "cListaT.h"
 #include "Alquiler.h";
 #include "Motocicleta.h"
+//template<class T>
 class cListaDeriv :
     public cListaT<Alquiler>
 {
     cListaDeriv();
     ~cListaDeriv();
-    Alquiler** OrdenarAlquileres();
-
-
-
-
+    template<class T>
+    T** OrdenarAlquileres();
 };
