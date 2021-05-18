@@ -11,7 +11,8 @@ class Motocicleta :
 public:
     Motocicleta(int numeroPatente, string color, int numeroChasis, int numeroPoliza,
         tm FechaUltMantenimiento, float precioDia, int capacidad, int casco, float precioOpcional);
-    virtual void PasosMantenimiento();
+    ~Motocicleta();
+    void PasosMantenimiento();
     float CalcularTarifa();
 };
 

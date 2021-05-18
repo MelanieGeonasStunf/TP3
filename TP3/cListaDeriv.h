@@ -1,12 +1,15 @@
 #pragma once
 #include "cListaT.h"
-template <class T>
+#include "Alquiler.h";
+#include "Motocicleta.h"
 class cListaDeriv :
-    public cListaT<class T>
+    public cListaT<Alquiler>
 {
-    cListaDeriv(unsigned int TAM) : cListaT<class T>(TAM)
-    {};
+    cListaDeriv();
+    ~cListaDeriv();
+    Alquiler** OrdenarAlquileres();
+
+
 
 
 };
-

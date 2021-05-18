@@ -1,25 +1,39 @@
 #include "Empresa.h"
 
-//dejarlo para cuando sepamos usar lista template
-void Empresa::Alquilar(Clientes* cliente)
+Empresa::Empresa()
+{
+}
+
+Empresa::~Empresa()
+{
+}
+
+void Empresa::Alquilar(Alquiler* alquiler)
 {
 	// se agrega  un alquiler a la lista de alquileres.
-	bool ok;
-	ok = AgregarItem <Alquiler> (cliente);		
+	if (CA_alquileres == TAM_alquileres)
+	{
+		//redimensionar!
+	}
+
+	ListaAlquileres[CA_alquileres].AgregarItem(alquiler); //deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw
+	ListaClientes[CA_clientes].AgregarItem(alquiler->getCliente());
+
 }
 
-void Empresa::Adquirir()
+void Empresa::Adquirir(Vehiculo* vehiculo)
 {
 	// agrega un vehiculo lista vehiculos
-
+	ListaVehiculos[CA_vehiculos].AgregarItem(vehiculo); //deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw
 }
 
-void Empresa::Retirar()
+void Empresa::Retirar(Vehiculo* vehiculo)
 {
 	// quita vehiculo lista vehiculos
+	ListaVehiculos[CA_vehiculos].Quitar(vehiculo); //quitar o eliminar?
 }
 
-void Empresa::Mantenimiento()
+void Empresa::Mantenimiento(Vehiculo* vehiculo)
 {
 	//llama a la funcion de mantenimiento de cada vehiculo
 }

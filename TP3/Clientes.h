@@ -4,5 +4,8 @@
 class Clientes
 {
 	string Nombre;
+	Clientes(string Nombre);
+	~Clientes();
+
 };
 

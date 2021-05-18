@@ -5,16 +5,17 @@
 
 class Alquiler
 {
+	friend class cListaDeriv;
 	Clientes* cliente;
 	Vehiculo* vehiculo;
 	int elementosAdicionales;
 	tm FechaInicio;
 	tm FechaFin;
 	float monto;
-	const int codigo;
-
+	const int clave;
 public:
-	const int getcodigo();
-};
+	Alquiler(Clientes *cliente, Vehiculo* vehiculo, int elementosAdicionales,tm FechaInicio,tm FechaFin,float monto,const int clave);
 
-//HOLA
+	const int getclave();
+	Clientes* getCliente();
+};
