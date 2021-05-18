@@ -11,9 +11,10 @@ class Alquiler
 	tm FechaInicio;
 	tm FechaFin;
 	float monto;
-	const int codigo;
+	const int clave;
 public:
-	Alquiler(Clientes *cliente, Vehiculo* vehiculo, int elementosAdicionales,tm FechaInicio,tm FechaFin,float monto,const int codigo);
+	Alquiler(Clientes *cliente, Vehiculo* vehiculo, int elementosAdicionales,tm FechaInicio,tm FechaFin,float monto,const int clave);
 
-	const int getcodigo();
+	const int getclave();
+	Clientes* getCliente();
 };
