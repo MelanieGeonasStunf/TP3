@@ -15,6 +15,15 @@ Vehiculo::~Vehiculo()
 {
 }
 
+void Vehiculo::setFechaUltMantenimiento()
+{
+	time_t rawtime;
+	tm* info;
+	time(&rawtime);
+	info = localtime(&rawtime);
+	FechaUltMantenimiento = *info;
+}
+
 void Vehiculo::PasosMantenimiento()
 {
 	string pasosMant = " -Cambio de filtros y de aceite" + '\n' +
@@ -35,5 +44,6 @@ void Vehiculo::PasosMantenimiento()
 		"Liquido limpiador de parabrisas" + '\n' +
 		"Limpieza y encerado" + '\n';
 		
+	setFechaUltMantenimiento();
 }
 
