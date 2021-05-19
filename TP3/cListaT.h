@@ -37,7 +37,7 @@ public:
 	unsigned int getCA();
 	unsigned int getTAM();
 
-	cListaT<T> operator+(cListaT<T>lista,T* miObjeto);
+	//cLista<T>& operator+(cListaT<T>& lista,T* miObjeto);
 
 	//istream& operator<<( )
 	T* operator[](unsigned int pos);
@@ -48,8 +48,6 @@ unsigned int cListaT<T>::getTAM()
 {
 	return TAM;
 }
-
-
 
 template<class T>
 unsigned int cListaT<T>::getCA()
@@ -226,7 +224,7 @@ inline T* cListaT<T>::operator[](unsigned int pos)
 
 
 template<class T>
- cListaT<T> operator+(cListaT<T> lista, T* miObjeto)
+ cListaT<T>& operator+(cListaT<T>& lista, T* miObjeto)
 {
 	 if (lista.AgregarItem(miObjeto) == true)
 		 return lista;
