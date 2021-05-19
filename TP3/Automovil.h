@@ -8,6 +8,8 @@ class Automovil :
 	int silladeseguridad;
 	float precioSillaSeg;
 public:
+	Automovil(int silladeseguridad, float precioSillaSeg);
+	//~Automovil();?
 	virtual void PasosMantenimiento();
 	float CalcularTarifa();
 	

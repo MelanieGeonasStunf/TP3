@@ -226,7 +226,7 @@ inline void cListaT<T>::operator+(T* miObjeto)
 template<class T>
 inline T* cListaT<T>::operator[](unsigned int pos)
 {
-	return getItem(pos);
+	return T(pos);
 }
 
 
