@@ -2,6 +2,10 @@
 #include "cListaT.h"
 #include "Alquiler.h";
 #include "Motocicleta.h"
+#include "Automovil.h"
+#include"Trafic.h"
+#include"Camioneta.h"
+
 //template<class T>
 class cListaDeriv :
     public cListaT<Alquiler>
@@ -9,5 +13,5 @@ class cListaDeriv :
     cListaDeriv();
     ~cListaDeriv();
     template<class T>
-    T** OrdenarAlquileres();
+    T** ListarAlquileres();
 };

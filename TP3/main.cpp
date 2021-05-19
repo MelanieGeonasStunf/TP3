@@ -5,8 +5,8 @@
 
 int main()
 {
-	/*cListaDeriv** lista = new cListaDeriv * [NMAX];
-	Motocicleta**coso=lista->OrdenarAlquileres<Motocicleta>();*/
+	cListaDeriv* lista;
+		//= new cListaDeriv [NMAX];
 	cListaT<Clientes>* ListaCl;
 	Clientes* cl1 = new Clientes("Pili");
 	Clientes* cl2 = new Clientes("Belu");
