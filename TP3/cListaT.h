@@ -37,7 +37,8 @@ public:
 	unsigned int getCA();
 	unsigned int getTAM();
 
-	void operator+(T* miObjeto);
+	cListaT<T> operator+(cListaT<T>lista,T* miObjeto);
+
 	//istream& operator<<( )
 	T* operator[](unsigned int pos);
 };
@@ -216,11 +217,6 @@ unsigned int cListaT<T>::getItemPos(string clave)
 	return INT_MAX;
 }
 
-template<class T>
-inline void cListaT<T>::operator+(T* miObjeto)
-{
-	bool ok = AgregarItem(miObjeto);
-}
 
 template<class T>
 inline T* cListaT<T>::operator[](unsigned int pos)
@@ -229,3 +225,14 @@ inline T* cListaT<T>::operator[](unsigned int pos)
 }
 
 
+template<class T>
+ cListaT<T> operator+(cListaT<T> lista, T* miObjeto)
+{
+	 if (lista.AgregarItem(miObjeto) == true)
+		 return lista;
+	
+	 throw "No se pudo agregar.";
+	 
+	 /*else
+		 return NULL;*/
+}
