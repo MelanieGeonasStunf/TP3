@@ -37,7 +37,7 @@ public:
 	unsigned int getCA();
 	unsigned int getTAM();
 
-	cListaT<T> operator+(cListaT<T>lista,T* miObjeto);
+	//cListaT<T> operator+(cListaT<T>lista,T* miObjeto);
 
 	//istream& operator<<( )
 	T* operator[](unsigned int pos);
