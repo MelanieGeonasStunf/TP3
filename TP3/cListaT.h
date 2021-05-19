@@ -8,13 +8,12 @@ using namespace std;
 template<class T>
 class cListaT
 {
-protected:
+public:
 	T **vector;
 	unsigned int CA, TAM;
 
 
 	void Redimensionalizar();
-public:
 	cListaT(unsigned int TAM = NMAX);
 	~cListaT();
 

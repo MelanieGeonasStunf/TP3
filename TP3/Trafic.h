@@ -3,7 +3,7 @@
 #include "Librerias.h"
 
 class Trafic :
-    public Vehiculo
+    protected Vehiculo
 {
     int silladeseguridad;
     int asientorebatible;
@@ -13,7 +13,7 @@ class Trafic :
 public:
     Trafic(int numeroPatente, string color, int numeroChasis, int numeroPoliza, tm FechaUltMantenimiento, float precioDia, int capacidad, 
         int silladeseguridad,int asientorebatible,float precioSillaSeg,float precioAsiento);
-
+    ~Trafic();
     virtual void PasosMantenimiento();
     float CalcularTarifa();
 };

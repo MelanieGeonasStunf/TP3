@@ -3,7 +3,7 @@
 #include "Librerias.h"
 
 class Motocicleta :
-    public Vehiculo
+    protected Vehiculo
 {
     int casco;
     float precioOpcional;

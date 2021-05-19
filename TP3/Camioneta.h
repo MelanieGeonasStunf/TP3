@@ -3,7 +3,7 @@
 #include "Vehiculo.h"
 
 class Camioneta:
-	public Vehiculo
+	protected Vehiculo
 {
 	int silladeseguridad;
 	int portaequipaje;

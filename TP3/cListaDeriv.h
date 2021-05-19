@@ -7,10 +7,10 @@
 #include "Trafic.h"
 //template<class T>
 class cListaDeriv :
-    protected cListaT<Alquiler>
+    public cListaT<Alquiler>
 {
 public:
-    cListaDeriv(unsigned int TAM=NMAX);
+    cListaDeriv();
     ~cListaDeriv();
    void OrdenarAlquileres(int vehiculoimprimir);
 };

@@ -4,10 +4,11 @@
 class Clientes
 {
 	string Nombre;
+	string DNI;
 public:
-	Clientes(string Nombre);
+	Clientes(string Nombre,string DNI);
 	~Clientes();
-
+	string getclave();
 
 };
 

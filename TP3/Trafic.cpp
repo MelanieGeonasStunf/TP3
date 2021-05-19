@@ -7,8 +7,11 @@ Trafic::Trafic(int numeroPatente, string color, int numeroChasis, int numeroPoli
     this->precioSillaSeg = precioSillaSeg;
     this->precioAsiento = precioAsiento;
 }
+
+Trafic::~Trafic()
 {
 }
+
 
 void Trafic::PasosMantenimiento()
 {

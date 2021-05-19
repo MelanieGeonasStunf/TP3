@@ -1,6 +1,6 @@
 ﻿#include "Vehiculo.h"
 
-Vehiculo::Vehiculo(int numeroPatente, string color, int numeroChasis, int numeroPoliza, tm FechaUltMantenimiento, float precioDia, int capacidad)
+Vehiculo::Vehiculo(string numeroPatente, string color, int numeroChasis, int numeroPoliza, tm FechaUltMantenimiento, float precioDia, int capacidad)
 {
 	this->numeroPatente = numeroPatente;
 	this->color = color;
@@ -26,8 +26,9 @@ void Vehiculo::setFechaUltMantenimiento()
 
 void Vehiculo::PasosMantenimiento()
 {
+	string linea= "- Revision de frenos";
 	string pasosMant = " -Cambio de filtros y de aceite" + '\n' +
-		"- Revision de frenos" + '\n' +
+		linea + '\n' +
 		"- Revision Neumáticos" + '\n' +
 		"Amortiguadores" + '\n' +
 		"- Revision de las luces " + '\n' +
@@ -45,5 +46,10 @@ void Vehiculo::PasosMantenimiento()
 		"Limpieza y encerado" + '\n';
 		
 	setFechaUltMantenimiento();
+}
+
+string Vehiculo::getclave()
+{
+	return numeroPatente;
 }
 

@@ -1,6 +1,6 @@
 #include "cListaDeriv.h"
 //template<class T
-cListaDeriv::cListaDeriv(unsigned int TAM=NMAX):cListaT<Alquiler>()
+cListaDeriv::cListaDeriv()
 {
 }
 //template<class T>
@@ -14,7 +14,7 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 	Alquiler** automoviles = new Alquiler * [CA];
 	Alquiler** camionetas = new Alquiler * [CA];
 	Alquiler** trafics = new Alquiler * [CA];
-	int cant_motocicletas = 0, cant_automovil, cant_trafic = 0, cant_camioneta = 0;
+	int cant_motocicletas = 0, cant_automovil=0, cant_trafic = 0, cant_camioneta = 0;
 	for (int i = 0; i < CA; i++)
 	{
 		motos[i] = NULL;
