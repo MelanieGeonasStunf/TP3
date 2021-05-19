@@ -85,6 +85,17 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 		}
 		break;
 	}
+	for (int i = 0; i < CA; i++)
+	{
+		delete motos[i];
+		delete trafics[i];
+		delete automoviles[i];
+		delete camionetas[i];
+	}
+	delete[] motos;
+	delete[] trafics;
+	delete[] automoviles;
+	delete[] camionetas;
 	/*for (int i = 0; i < CA; i++)
 	{
 		if (vector[i] == NULL||vector[i]->vehiculo==NULL)

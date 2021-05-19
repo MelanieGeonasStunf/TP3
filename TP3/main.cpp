@@ -6,7 +6,7 @@
 int main()
 {
 	cListaDeriv *lista=new cListaDeriv();
-	lista->OrdenarAlquileres();
+	lista->OrdenarAlquileres(moto);
 	cListaT<Clientes>* ListaCl;
 	Clientes* cl1 = new Clientes("Pili");
 	Clientes* cl2 = new Clientes("Belu");
