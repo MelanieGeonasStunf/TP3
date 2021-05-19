@@ -1,5 +1,9 @@
 #include "Automovil.h"
 
+void Automovil::PasosMantenimiento()
+{
+}
+
 float Automovil::CalcularTarifa()
 {
     float precioAuto = precioDia;

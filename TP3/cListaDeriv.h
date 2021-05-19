@@ -1,17 +1,16 @@
 #pragma once
 #include "cListaT.h"
 #include "Alquiler.h";
-#include "Motocicleta.h"
 #include "Automovil.h"
-#include"Trafic.h"
-#include"Camioneta.h"
-
+#include "Motocicleta.h"
+#include "Camioneta.h"
+#include "Trafic.h"
 //template<class T>
 class cListaDeriv :
-    public cListaT<Alquiler>
+    protected cListaT<Alquiler>
 {
-    cListaDeriv();
+public:
+    cListaDeriv(unsigned int TAM=NMAX);
     ~cListaDeriv();
-    template<class T>
-    T** ListarAlquileres();
+   void OrdenarAlquileres(int vehiculoimprimir);
 };

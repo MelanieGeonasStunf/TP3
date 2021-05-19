@@ -13,7 +13,7 @@ public:
 	Camioneta(int numeroPatente, string color, int numeroChasis,
 		int numeroPoliza, tm FechaUltMantenimiento, float precioDia, int capacidad,
 		int silladeseguridad, int portaequipaje, float precioSillaSeg, float precioPortaEquip);
-	virtual void PasosMantenimiento();
+	void PasosMantenimiento();
 	float CalcularTarifa();
 };
 
