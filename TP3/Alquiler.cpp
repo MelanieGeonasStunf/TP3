@@ -1,6 +1,6 @@
 #include "Alquiler.h"
 
-Alquiler::Alquiler(Clientes* cliente, Vehiculo* vehiculo, int elementosAdicionales, tm FechaInicio, tm FechaFin, float monto, const int clave_) :clave(clave_)
+Alquiler::Alquiler(Clientes* cliente, Vehiculo* vehiculo, int elementosAdicionales, tm FechaInicio, tm FechaFin, float monto, string clave_)
 {
     this->cliente = cliente;
     this->vehiculo = vehiculo;
@@ -8,6 +8,7 @@ Alquiler::Alquiler(Clientes* cliente, Vehiculo* vehiculo, int elementosAdicional
     this->FechaInicio = FechaInicio;
     this->FechaFin = FechaFin;
     this->monto = monto;
+    this->clave = clave_;
 }
 
 Alquiler::~Alquiler()
@@ -22,6 +23,11 @@ Alquiler::~Alquiler()
 Clientes* Alquiler::getCliente()
 {
     return cliente;
+}
+
+string Alquiler::getclave()
+{
+    return clave;
 }
 
 

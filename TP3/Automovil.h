@@ -8,7 +8,7 @@ class Automovil :
 	int silladeseguridad;
 	float precioSillaSeg;
 public:
-	Automovil(int numeroPatente, string color, int numeroChasis, 
+	Automovil(string numeroPatente, string color, int numeroChasis, 
 		int numeroPoliza, tm FechaUltMantenimiento, float precioDia, 
 		int capacidadint, int silladeseguridad, float precioSillaSeg);
 	~Automovil();
