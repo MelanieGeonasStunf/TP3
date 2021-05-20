@@ -13,4 +13,9 @@ public:
     cListaDeriv();
     ~cListaDeriv();
    void OrdenarAlquileres(int vehiculoimprimir);
+   int TarifaAuto();
+   int TarifaMoto();
+   int TarifaCamioneta();
+   int TarifaTrafic();
+   int TarifaTotal(int TarifaAuto, int TarifaMoto, int TarifaCam, int TarifaTrafic);
 };

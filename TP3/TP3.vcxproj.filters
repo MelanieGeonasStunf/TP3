@@ -56,6 +56,15 @@
     <ClCompile Include="Automovil.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
+    <ClCompile Include="Alquiler.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camioneta.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Clientes.cpp">
+=======
     <ClCompile Include="Clientes.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
@@ -63,6 +72,7 @@
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="Camioneta.cpp">
+>>>>>>> 4176e68e038b79f06a006f88021c2d32d63a97ec
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="cListaDeriv.cpp">
