@@ -1,7 +1,7 @@
 #include "Camioneta.h"
 
-Camioneta::Camioneta(string numeroPatente, string color, int numeroChasis, int numeroPoliza, tm FechaUltMantenimiento, float precioDia, int capacidad, int silladeseguridad, int portaequipaje, float precioSillaSeg, float precioPortaEquip):Vehiculo(numeroPatente, color, numeroChasis, numeroPoliza,
-    FechaUltMantenimiento, precioDia, capacidad)
+Camioneta::Camioneta(string numeroPatente, string color, int numeroChasis, int numeroPoliza, float precioDia, int capacidad, int silladeseguridad, int portaequipaje, float precioSillaSeg, float precioPortaEquip):Vehiculo(numeroPatente, color,
+    numeroChasis, numeroPoliza, precioDia, capacidad)
 {
     this->silladeseguridad = silladeseguridad;
     this->portaequipaje = portaequipaje;

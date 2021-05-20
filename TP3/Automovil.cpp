@@ -1,13 +1,14 @@
 #include "Automovil.h"
 
-Automovil::Automovil(string numeroPatente, string color, int numeroChasis, int numeroPoliza, 
-    tm FechaUltMantenimiento, float precioDia, int capacidadint,
-    int silladeseguridad, float precioSillaSeg):Vehiculo(numeroPatente, color, numeroChasis, numeroPoliza,
-        FechaUltMantenimiento, precioDia, capacidad)
+Automovil::Automovil(string numeroPatente, string color, int numeroChasis, 
+		int numeroPoliza,float precioDia, 
+		int capacidadint, float precioSillaSeg):Vehiculo(numeroPatente, color, numeroChasis, numeroPoliza,
+            precioDia, capacidadint)
 {
-    this->silladeseguridad = silladeseguridad;
     this->precioSillaSeg = precioSillaSeg;
 }
+
+
 Automovil::~Automovil()
 {
 }
@@ -16,7 +17,7 @@ void Automovil::PasosMantenimiento()
 {
 }
 
-float Automovil::CalcularTarifa()
+float Automovil::CalcularTarifa(int dias)
 {
     float precioAuto = precioDia;
     for (int i = 0; i < silladeseguridad; i++)

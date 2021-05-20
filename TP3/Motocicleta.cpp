@@ -1,7 +1,7 @@
 #include "Motocicleta.h"
 
-Motocicleta::Motocicleta(string numeroPatente, string color, int numeroChasis, int numeroPoliza, tm FechaUltMantenimiento, float precioDia, int capacidad, int casco, float precioOpcional):Vehiculo(numeroPatente, color, numeroChasis, numeroPoliza,
-    FechaUltMantenimiento, precioDia, capacidad)
+Motocicleta::Motocicleta(string numeroPatente, string color, int numeroChasis, int numeroPoliza, float precioDia, int capacidad, int casco, float precioOpcional):Vehiculo(numeroPatente, color, numeroChasis, numeroPoliza,
+    precioDia, capacidad)
 {
     this->casco = casco;
     this->precioOpcional = precioOpcional;

@@ -1,13 +1,13 @@
 #include "Alquiler.h"
 
-Alquiler::Alquiler(Clientes* cliente, Vehiculo* vehiculo, int elementosAdicionales, tm FechaInicio, tm FechaFin, float monto, string clave_)
+Alquiler::Alquiler(Clientes* cliente, Vehiculo* vehiculo, int elementosAdicionales, tm FechaInicio, tm FechaFin, string clave_)
 {
     this->cliente = cliente;
     this->vehiculo = vehiculo;
     this->elementosAdicionales = elementosAdicionales;
     this->FechaInicio = FechaInicio;
     this->FechaFin = FechaFin;
-    this->monto = monto;
+    this->monto =0;
     this->clave = clave_;
 }
 
@@ -33,7 +33,7 @@ string Alquiler::getclave()
 void Alquiler::setmonto()
 {
     try {
-        int monto= vehiculo->CalcularTarifa(CalcularTiempo());
+        float monto= vehiculo->CalcularTarifa(CalcularTiempo());
     }
     catch (string excep)
     {
@@ -49,6 +49,6 @@ int Alquiler::CalcularTiempo()
     double difference = difftime(fin, inicio);
     if (difference == 0)
         throw "fechas ingresadas no disponibles";
-    return difference / 86400;
+    return (int)difference / 86400;
 }
 

@@ -15,7 +15,7 @@ protected:
 
 
 public:
-	Vehiculo(string numeroPatente, string color, int numeroChasis, int numeroPoliza, tm FechaUltMantenimiento, float precioDia, int capacidad);
+	Vehiculo(string numeroPatente, string color, int numeroChasis, int numeroPoliza,float precioDia, int capacidad);
 	virtual ~Vehiculo();
 
 	void setFechaUltMantenimiento();
