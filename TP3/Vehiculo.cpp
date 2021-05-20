@@ -44,7 +44,7 @@ void Vehiculo::PasosMantenimiento()
 		"Bujias" + '\n' +
 		"Liquido limpiador de parabrisas" + '\n' +
 		"Limpieza y encerado" + '\n';
-
+	 
 }
 
 string Vehiculo::getclave()
