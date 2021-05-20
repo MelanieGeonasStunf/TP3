@@ -1,6 +1,7 @@
 #include "Empresa.h"
 Empresa::Empresa()
 {
+	//!!!!!
 }
 
 Empresa::~Empresa()
@@ -9,21 +10,36 @@ Empresa::~Empresa()
 
 void Empresa::Alquilar(Alquiler* alquiler)
 {
-	// se agrega  un alquiler a la lista de alquileres.
-	if (CA_alquileres == TAM_alquileres)
+	try
 	{
-		//redimensionar!
+		if (ListaAlquileres[CA_alquileres].AgregarItem(alquiler)== true || 
+			ListaClientes[CA_clientes].AgregarItem(alquiler->getCliente())==true)
+			return;
+	}
+	catch (exception)
+	{
+		throw new exception("No se pudo agregar el item a la lista");
 	}
 
-	ListaAlquileres[CA_alquileres].AgregarItem(alquiler); //deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw
-	ListaClientes[CA_clientes].AgregarItem(alquiler->getCliente());
+	 //deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw
+	
 
 }
 
 void Empresa::Adquirir(Vehiculo* vehiculo)
 {
 	// agrega un vehiculo lista vehiculos
-	ListaVehiculos[CA_vehiculos].AgregarItem(vehiculo); //deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw
+	//deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw
+	try
+	{
+		if (ListaVehiculos[CA_vehiculos].AgregarItem(vehiculo) == true)
+			return;
+	}
+	catch (exception)
+	{
+		throw new exception("No se pudo agregar el item a la lista");
+	}
+	
 }
 
 void Empresa::Retirar(Vehiculo* vehiculo)
