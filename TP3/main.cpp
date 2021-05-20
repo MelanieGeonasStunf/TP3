@@ -2,6 +2,7 @@
 #include "Alquiler.h"
 #include "cListaDeriv.h"
 #include"Clientes.h"
+#include "cListaT.h"
 
 
 int main()
@@ -11,7 +12,6 @@ int main()
 	cListaT<Clientes>* ListaCl;
 	Clientes* cl1 = new Clientes("Pili","44120931");
 	Clientes* cl2 = new Clientes("Belu","1234567");
-	
-	ListaCl=ListaCl+cl1;
+	//ListaCl+cl1;//no nos deja usar el operateor
 	
 }

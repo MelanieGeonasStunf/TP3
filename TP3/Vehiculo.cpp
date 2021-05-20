@@ -1,5 +1,5 @@
 ﻿#include "Vehiculo.h"
-
+//static float tarifabase=
 Vehiculo::Vehiculo(string numeroPatente, string color, int numeroChasis, int numeroPoliza, tm FechaUltMantenimiento, float precioDia, int capacidad)
 {
 	this->numeroPatente = numeroPatente;

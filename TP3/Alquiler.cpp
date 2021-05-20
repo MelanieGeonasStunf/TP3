@@ -30,4 +30,25 @@ string Alquiler::getclave()
     return clave;
 }
 
+void Alquiler::setmonto()
+{
+    try {
+        int monto= vehiculo->CalcularTarifa(CalcularTiempo());
+    }
+    catch (string excep)
+    {
+        throw excep;
+    }
+    this->monto = monto;
+}
+
+int Alquiler::CalcularTiempo()
+{
+    time_t inicio = mktime(&FechaInicio);
+    time_t fin = mktime(&FechaFin);
+    double difference = difftime(fin, inicio);
+    if (difference == 0)
+        throw "fechas ingresadas no disponibles";
+    return difference / 86400;
+}
 

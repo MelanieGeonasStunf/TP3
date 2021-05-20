@@ -20,4 +20,6 @@ public:
 	//const int getclave();
 	Clientes* getCliente();
 	string getclave();
+	void setmonto();//creo un st monto donde llamo a calcular tarifa
+	int CalcularTiempo();
 };
