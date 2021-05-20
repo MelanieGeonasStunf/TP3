@@ -13,15 +13,9 @@ class Empresa
 	cListaT<Clientes> *ListaClientes;
 	cListaDeriv*ListaAlquileres;
 	//Alquiler** ListaAlquileres;
-	int CA_alquileres;
-	int TAM_alquileres;
-	int CA_vehiculos;
-	int TAM_vehiculos;
-	int CA_clientes;
-	int TAM_clientes;
-
 public:
-	Empresa();
+	Empresa(cListaT<Vehiculo>* ListaVehiculos,cListaT<Clientes>* ListaClientes,
+	cListaDeriv* ListaAlquileres);
 	~Empresa();
 	void Alquilar(Alquiler* alquiler);
 	void Adquirir(Vehiculo* vehiculo);

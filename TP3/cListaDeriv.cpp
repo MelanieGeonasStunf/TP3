@@ -73,7 +73,7 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 		for (int i = 0; i < CA; i++)
 		{
 			if (vector[i] == NULL || vector[i]->vehiculo == NULL)
-				return;
+				return;//throw exception
 			Vehiculo* v = vector[i]->vehiculo;
 			Motocicleta* ptr = dynamic_cast<Motocicleta*>(v);
 			if (ptr != NULL)
@@ -213,7 +213,7 @@ int cListaDeriv::TarifaTrafic()
 		Trafic* ptr = dynamic_cast<Trafic*>(v);
 		if (ptr != NULL)
 		{
-			Tarifa = ptr[i].CalcularTarifa() + Tarifa;
+			Tarifa = ptr[i].CalcularTarifa(vector[i]->CalcularTiempo()) + Tarifa;
 		}
 	}
 	return Tarifa;

@@ -17,7 +17,7 @@ void Trafic::PasosMantenimiento()
 {
 }
 
-float Trafic::CalcularTarifa()
+float Trafic::CalcularTarifa(int dias)
 {
     float precioTrafic = precioDia;
     for (int i = 0; i < silladeseguridad; i++)

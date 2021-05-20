@@ -1,7 +1,11 @@
 #include "Empresa.h"
-Empresa::Empresa()
+Empresa::Empresa(cListaT<Vehiculo>* ListaVehiculos, cListaT<Clientes>* ListaClientes,
+	cListaDeriv* ListaAlquileres)
 {
-	//!!!!!
+	this->ListaClientes= ListaClientes;
+	this->ListaVehiculos=ListaVehiculos;
+	this->ListaAlquileres = ListaAlquileres;
+	
 }
 
 Empresa::~Empresa()
@@ -12,8 +16,8 @@ void Empresa::Alquilar(Alquiler* alquiler)
 {
 	try
 	{
-		if (ListaAlquileres[CA_alquileres].AgregarItem(alquiler)== true || 
-			ListaClientes[CA_clientes].AgregarItem(alquiler->getCliente())==true)
+		if (ListaAlquileres[ListaAlquileres->CA].AgregarItem(alquiler)== true || 
+			ListaClientes[ListaClientes->CA].AgregarItem(alquiler->getCliente())==true)
 			return;
 	}
 	catch (exception)
@@ -32,7 +36,7 @@ void Empresa::Adquirir(Vehiculo* vehiculo)
 	//deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw
 	try
 	{
-		if (ListaVehiculos[CA_vehiculos].AgregarItem(vehiculo) == true)
+		if (ListaVehiculos[ListaVehiculos->CA].AgregarItem(vehiculo) == true)
 			return;
 	}
 	catch (exception)
@@ -45,7 +49,7 @@ void Empresa::Adquirir(Vehiculo* vehiculo)
 void Empresa::Retirar(Vehiculo* vehiculo)
 {
 	// quita vehiculo lista vehiculos
-	ListaVehiculos[CA_vehiculos].Quitar(vehiculo); //quitar o eliminar?
+	ListaVehiculos[ListaVehiculos->CA].Quitar(vehiculo); //quitar o eliminar?
 }
 
 void Empresa::Mantenimiento(Vehiculo* vehiculo)

@@ -3,7 +3,7 @@
 #include "Vehiculo.h"
 
 class Automovil :
-	protected Vehiculo
+	public Vehiculo
 {
 	int silladeseguridad;
 	float precioSillaSeg;
