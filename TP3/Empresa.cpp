@@ -34,5 +34,7 @@ void Empresa::Retirar(Vehiculo* vehiculo)
 
 void Empresa::Mantenimiento(Vehiculo* vehiculo)
 {
+	vehiculo->PasosMantenimiento();
+	vehiculo->setFechaUltMantenimiento();
 	//llama a la funcion de mantenimiento de cada vehiculo
 }

@@ -236,10 +236,8 @@ inline T* cListaT<T>::operator[](unsigned int pos)
 template<class T>
  inline void cListaT<T>::operator+( T* miObjeto)
 {
-	 if (lista.AgregarItem(miObjeto) == true) //Miren la nota al final de este archivo
-		 return lista;
-	
-	 throw "No se pudo agregar.";
+	 if (AgregarItem(miObjeto) == false) //Miren la nota al final de este archivo
+		 throw "No se pudo agregar.";
 	 
 	 /*else
 		 return NULL;*/
