@@ -26,7 +26,7 @@ void Vehiculo::setFechaUltMantenimiento()
 
 void Vehiculo::PasosMantenimiento()
 {
-	string linea= "- Revision de frenos";
+	string linea = "- Revision de frenos";
 	string pasosMant = " -Cambio de filtros y de aceite" + '\n' +
 		linea + '\n' +
 		"- Revision Neumáticos" + '\n' +
@@ -44,8 +44,7 @@ void Vehiculo::PasosMantenimiento()
 		"Bujias" + '\n' +
 		"Liquido limpiador de parabrisas" + '\n' +
 		"Limpieza y encerado" + '\n';
-		
-	setFechaUltMantenimiento();
+
 }
 
 string Vehiculo::getclave()
