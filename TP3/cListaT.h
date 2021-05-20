@@ -60,7 +60,15 @@ unsigned int cListaT<T>::getCA()
 template<class T>
 void cListaT<T>::Redimensionalizar()
 {
-	////
+	TAM = TAM * 2;
+	T** nuevo = new T* [TAM]; //agrando el tamanio de la lista
+	for (int i = 0; i < CA; i++)
+	{
+		nuevo[i] = vector[i];
+	}
+	
+	delete[] vector;
+	vector = nuevo;
 }
 
 template<class T>
