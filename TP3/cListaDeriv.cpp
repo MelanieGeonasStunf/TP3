@@ -157,7 +157,7 @@ int cListaDeriv::TarifaAuto()
 	for (int i = 0; i < CA; i++)
 	{
 		if (vector[i] == NULL || vector[i]->vehiculo == NULL)
-			return;
+			return 0;
 		Vehiculo* v = vector[i]->vehiculo;
 		Automovil* ptr = dynamic_cast<Automovil*>(v);
 		if (ptr != NULL)
@@ -174,7 +174,7 @@ int cListaDeriv::TarifaMoto()
 	for (int i = 0; i < CA; i++)
 	{
 		if (vector[i] == NULL || vector[i]->vehiculo == NULL)
-			return;
+			return 0;
 		Vehiculo* v = vector[i]->vehiculo;
 		Motocicleta* ptr = dynamic_cast<Motocicleta*>(v);
 		if (ptr != NULL)
@@ -191,7 +191,7 @@ int cListaDeriv::TarifaCamioneta()
 	for (int i = 0; i < CA; i++)
 	{
 		if (vector[i] == NULL || vector[i]->vehiculo == NULL)
-			return;
+			return 0;
 		Vehiculo* v = vector[i]->vehiculo;
 		Camioneta* ptr = dynamic_cast<Camioneta*>(v);
 		if (ptr != NULL)
@@ -208,7 +208,7 @@ int cListaDeriv::TarifaTrafic()
 	for (int i = 0; i < CA; i++)
 	{
 		if (vector[i] == NULL || vector[i]->vehiculo == NULL)
-			return;
+			return 0;
 		Vehiculo* v = vector[i]->vehiculo;
 		Trafic* ptr = dynamic_cast<Trafic*>(v);
 		if (ptr != NULL)

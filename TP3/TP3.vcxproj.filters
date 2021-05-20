@@ -1,94 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
+    <ClCompile Include="Alquiler.cpp" />
+    <ClCompile Include="Automovil.cpp" />
+    <ClCompile Include="Camioneta.cpp" />
+    <ClCompile Include="Clientes.cpp" />
+    <ClCompile Include="cListaDeriv.cpp" />
+    <ClCompile Include="Empresa.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Motocicleta.cpp" />
+    <ClCompile Include="Trafic.cpp" />
+    <ClCompile Include="Vehiculo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Vehiculo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Motocicleta.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Automovil.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Camioneta.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Trafic.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Empresa.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Alquiler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Clientes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Librerias.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cListaT.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cListaDeriv.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Automovil.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="Alquiler.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Camioneta.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Clientes.cpp">
-=======
-    <ClCompile Include="Clientes.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Alquiler.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Camioneta.cpp">
->>>>>>> 4176e68e038b79f06a006f88021c2d32d63a97ec
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="cListaDeriv.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Empresa.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Motocicleta.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Trafic.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Vehiculo.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
+    <ClInclude Include="Alquiler.h" />
+    <ClInclude Include="Automovil.h" />
+    <ClInclude Include="Camioneta.h" />
+    <ClInclude Include="Clientes.h" />
+    <ClInclude Include="cListaDeriv.h" />
+    <ClInclude Include="cListaT.h" />
+    <ClInclude Include="Empresa.h" />
+    <ClInclude Include="Librerias.h" />
+    <ClInclude Include="Motocicleta.h" />
+    <ClInclude Include="Trafic.h" />
+    <ClInclude Include="Vehiculo.h" />
   </ItemGroup>
 </Project>
