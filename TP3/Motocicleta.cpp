@@ -15,7 +15,7 @@ void Motocicleta::PasosMantenimiento()
 {
 }
 
-float Motocicleta::CalcularTarifa()
+float Motocicleta::CalcularTarifa(int dias)
 {
     float precioMoto = precioDia;
     for (int i = 0; i < casco; i++)
@@ -23,4 +23,13 @@ float Motocicleta::CalcularTarifa()
         precioMoto = precioOpcional + precioMoto;
     }
     return precioMoto;
+}
+
+string Motocicleta::tostring()
+{
+    string cadena = "\nNumero Patente: " + numeroPatente + '\n' + "Color: " + color + '\n'
+        + "Numero Poliza: " + to_string(numeroPoliza) + '\n' + "Precio dia: " + to_string(precioDia) + '\n'
+        + "Capacidad: " + to_string(capacidad) + '\n' + "Precio casco: " + to_string(precioOpcional) +
+        '\n' + "Cantidad de cascos: " + to_string(casco);
+    return cadena;
 }

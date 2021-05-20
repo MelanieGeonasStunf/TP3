@@ -30,3 +30,13 @@ float Trafic::CalcularTarifa(int dias)
     }
     return precioTrafic;
 }
+
+string Trafic::tostring()
+{
+    string cadena = "\nNumero Patente: " + numeroPatente + '\n' + "Color: " + color + '\n'
+        + "Numero Poliza: " + to_string(numeroPoliza) + '\n' + "Precio dia: " + to_string(precioDia) + '\n'
+        + "Capacidad: " + to_string(capacidad) + '\n' + "Precio silla seguridad: " + to_string(precioSillaSeg) +
+        '\n' + "Cantidad sillas seguridad: " + to_string(silladeseguridad) + '\n' + "Precio Asiento rebatible: " + to_string(precioAsiento) +
+        '\n' + "Cantidad Asiento rebatible: " + to_string(precioAsiento);
+    return cadena;
+}

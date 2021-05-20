@@ -9,6 +9,16 @@ Camioneta::Camioneta(string numeroPatente, string color, int numeroChasis, int n
     this->precioPortaEquip = precioPortaEquip;
 }
 
+string Camioneta::tostring()
+{
+    string cadena = "\nNumero Patente: " + numeroPatente + '\n' + "Color: " + color + '\n'
+        + "Numero Poliza: " + to_string(numeroPoliza) + '\n' + "Precio dia: " + to_string(precioDia) + '\n'
+        + "Capacidad: " + to_string(capacidad) + '\n' + "Precio silla seguridad: " + to_string(precioSillaSeg) +
+        '\n' + "Cantidad sillas seguridad: " + to_string(silladeseguridad)+'\n'+ "Precio portaequipaje: " + to_string(precioPortaEquip) +
+        '\n' + "Cantidad portaequipaje: " + to_string(portaequipaje);
+    return cadena;
+}
+
 void Camioneta::PasosMantenimiento()
 {
 }

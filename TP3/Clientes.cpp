@@ -14,3 +14,9 @@ string Clientes::getclave()
 {
 	return DNI;
 }
+
+string Clientes::tostring()
+{
+	string cadena = "\nNombre: " + Nombre + '\n' + "\nDNI:" + DNI;
+	return cadena;
+}

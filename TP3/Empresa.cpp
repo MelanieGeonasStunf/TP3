@@ -58,3 +58,23 @@ void Empresa::Mantenimiento(Vehiculo* vehiculo)
 	vehiculo->setFechaUltMantenimiento();
 	//llama a la funcion de mantenimiento de cada vehiculo
 }
+
+string Empresa::tostring()
+{
+	string cadena="\nAlquileres";
+	for (int i = 0; i <ListaAlquileres->CA ; i++)
+	{
+		cadena += ListaAlquileres->vector[i]->tostring();
+	}
+	cadena += "\nClientes";
+	for (int i = 0; i < ListaAlquileres->CA; i++)
+	{
+		cadena += ListaClientes->vector[i]->tostring();
+	}
+	cadena += "\nVehiculos";
+	for (int i = 0; i < ListaAlquileres->CA; i++)
+	{
+		cadena += ListaVehiculos->vector[i]->tostring();
+	}
+	return cadena;
+}

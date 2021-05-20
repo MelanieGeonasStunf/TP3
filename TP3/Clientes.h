@@ -9,6 +9,6 @@ public:
 	Clientes(string Nombre,string DNI);
 	~Clientes();
 	string getclave();
-
+	string tostring();
 };
 

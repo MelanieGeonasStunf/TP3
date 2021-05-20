@@ -39,7 +39,8 @@ public:
 
 	void operator+(T* miObjeto);
 
-	//istream& operator<<( )
+	//ostream& operator<<(ostream& o, const T& object);
+	//ostream operator<<(T& object);
 	T* operator[](unsigned int pos);
 };
 
@@ -120,7 +121,7 @@ bool cListaT<T>::AgregarItem(T * item)
 
 	if (CA < TAM)
 		vector[CA++] = item;
-	else throw new exception("No hay tama�o suficiente para agregar el item");;
+	else throw new exception("No hay tama�o suficiente para agregar el item");
 	return true;
 }
 template<class T>
@@ -227,6 +228,13 @@ unsigned int cListaT<T>::getItemPos(string clave)
 
 
 template<class T>
+inline ostream cListaT<T>:: operator<<(T &object)//no funca
+{
+	ostream o << object.tostring();
+	return o;
+}
+
+template<class T>
 inline T* cListaT<T>::operator[](unsigned int pos)
 {
 	return T(pos);
@@ -242,6 +250,12 @@ template<class T>
 	 /*else
 		 return NULL;*/
 }
+
+ template<class T>
+ inline ostream& cListaT<T>::operator<<(ostream& o, const T& object)
+ {
+	 // TODO: insert return statement here
+ }
 
  /*Ojo, no está bien llamar a lista. En primer lugar, lista no es nada en este ámbito que es el error que van a tener cuando traten de compilar esto
 no sé si se quieren referir a vector, en cuyo caso tampcoo está bien porque vector es solamente eso, un vector,

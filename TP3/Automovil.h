@@ -9,11 +9,11 @@ class Automovil :
 	float precioSillaSeg;
 public:
 	Automovil(string numeroPatente, string color, int numeroChasis, 
-		int numeroPoliza, float precioDia, 
-		int capacidadint,float precioSillaSeg);
+		int numeroPoliza, float precioDia, int capacidad, float precioSillaSeg);
 	~Automovil();
 	void PasosMantenimiento();
 	float CalcularTarifa(int dias);
+	string tostring();
 	
 
 };

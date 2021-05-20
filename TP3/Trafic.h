@@ -16,5 +16,7 @@ public:
     ~Trafic();
     virtual void PasosMantenimiento();
     float CalcularTarifa(int dias);
+    string tostring();
+
 };
 

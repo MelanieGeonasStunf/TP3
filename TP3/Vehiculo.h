@@ -22,6 +22,7 @@ public:
 
 	virtual float CalcularTarifa(int dias)=0;
 	virtual void PasosMantenimiento()=0;
+	virtual string tostring()=0;
 	string getclave();
 
 	//virtual void AgregarElementosSeguridad();

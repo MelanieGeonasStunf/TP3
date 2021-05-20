@@ -8,7 +8,7 @@ class Alquiler
 	friend class cListaDeriv;
 	Clientes* cliente;
 	Vehiculo* vehiculo;
-	int elementosAdicionales;
+	int elementosAdicionales;//que se pone en este int
 	tm FechaInicio;
 	tm FechaFin;
 	float monto;
@@ -18,6 +18,7 @@ public:
 		tm FechaInicio,tm FechaFin,string clave_);
 	~Alquiler();
 	//const int getclave();
+	string tostring();
 	Clientes* getCliente();
 	string getclave();
 	void setmonto();//creo un st monto donde llamo a calcular tarifa

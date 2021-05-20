@@ -179,7 +179,7 @@ int cListaDeriv::TarifaMoto()
 		Motocicleta* ptr = dynamic_cast<Motocicleta*>(v);
 		if (ptr != NULL)
 		{
-			Tarifa = ptr[i].CalcularTarifa() + Tarifa;
+			Tarifa = ptr[i].CalcularTarifa(vector[i]->CalcularTiempo()) + Tarifa;
 		}
 	}
 	return Tarifa;

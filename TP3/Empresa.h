@@ -21,5 +21,7 @@ public:
 	void Adquirir(Vehiculo* vehiculo);
 	void Retirar(Vehiculo* vehiculo);
 	void Mantenimiento(Vehiculo* vehiculo);
+	string tostring();
+
 };
 

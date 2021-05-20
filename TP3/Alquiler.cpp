@@ -20,6 +20,16 @@ Alquiler::~Alquiler()
     return clave;
 }*/
 
+string Alquiler::tostring()
+{
+    string cadena = "\nAlquiler: " + clave + '\n' + "Cliente: " + cliente->tostring() +
+        '\n' + "Vehiculo: " + vehiculo->tostring() + '\n' + "Fecha Inicio: " + to_string(FechaInicio.tm_mday) + '/' +
+        to_string(FechaInicio.tm_mon) + '/' + to_string(FechaInicio.tm_year) + '\n'
+        + "Fecha Fin:" + to_string(FechaFin.tm_mday) + '/' +
+        to_string(FechaFin.tm_mon) + '/' + to_string(FechaFin.tm_year) + '\n' + "Monto:" + to_string(monto);
+    return cadena;
+}
+
 Clientes* Alquiler::getCliente()
 {
     return cliente;

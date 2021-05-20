@@ -9,9 +9,12 @@ class Motocicleta :
     float precioOpcional;
     //ponemos precio base como atributo?
 public:
-    Motocicleta(string numeroPatente, string color, int numeroChasis, int numeroPoliza, float precioDia, int capacidad, int casco, float precioOpcional);
+    Motocicleta(string numeroPatente, string color, int numeroChasis,
+        int numeroPoliza, float precioDia, int capacidad, int casco, float precioOpcional);
     ~Motocicleta();
     void PasosMantenimiento();
-    float CalcularTarifa();
+    float CalcularTarifa(int dias);
+    string tostring();
+
 };
 
