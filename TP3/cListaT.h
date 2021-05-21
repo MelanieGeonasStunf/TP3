@@ -51,8 +51,6 @@ unsigned int cListaT<T>::getTAM()
 	return TAM;
 }
 
-
-
 template<class T>
 unsigned int cListaT<T>::getCA()
 {
@@ -227,12 +225,12 @@ unsigned int cListaT<T>::getItemPos(string clave)
 	return INT_MAX;
 }
 
-
 template<class T>
 inline ostream cListaT<T>::operator<<(T &object)
 {
-	ostream o << object.tostring();
-	return o;
+	ostream out;
+	out << object.tostring();
+	return out;
 }
 
 template<class T>
