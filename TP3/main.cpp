@@ -27,6 +27,7 @@ int main()
 	*ListaVehiculos + auto1;
 	*ListaVehiculos + moto1;
 	lista->OrdenarAlquileres(moto);//hacer con clista?
+	Alquiler1->setmonto();
 	/*FALTA HACER
 	-operadores
 	-main

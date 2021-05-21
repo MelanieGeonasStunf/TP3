@@ -59,6 +59,7 @@ int Alquiler::CalcularTiempo()
     double difference = difftime(fin, inicio);
     if (difference == 0)
         throw "fechas ingresadas no disponibles";
-    return (int)difference / 86400;
+    int dias = (int)difference / 86400;
+    return dias;
 }
 

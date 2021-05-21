@@ -196,7 +196,7 @@ int cListaDeriv::TarifaCamioneta()
 		Camioneta* ptr = dynamic_cast<Camioneta*>(v);
 		if (ptr != NULL)
 		{
-			Tarifa = ptr[i].CalcularTarifa() + Tarifa;
+			Tarifa = ptr[i].CalcularTarifa(vector[i]->CalcularTiempo()) + Tarifa;
 		}
 	}
 	return Tarifa;

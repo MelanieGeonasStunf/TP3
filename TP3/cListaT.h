@@ -39,9 +39,8 @@ public:
 
 	void operator+(T* miObjeto);
 
-	//ostream& operator<<(ostream& o, const T& object);
-	ostream operator<<(T& object);
-
+	//ostream& operator<<(ostream& out, const T& object);
+	//ostream& operator<<(T& object);
 	T* operator[](unsigned int pos);
 };
 
@@ -225,13 +224,14 @@ unsigned int cListaT<T>::getItemPos(string clave)
 	return INT_MAX;
 }
 
-template<class T>
-inline ostream cListaT<T>::operator<<(T &object)
+//template<class T>
+/*inline ostream& cListaT<T>::operator<<(T &object)
 {
 	ostream out;
 	out << object.tostring();
 	return out;
 }
+*/
 
 template<class T>
 inline T* cListaT<T>::operator[](unsigned int pos)
