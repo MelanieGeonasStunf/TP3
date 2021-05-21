@@ -33,6 +33,8 @@ int main()
 	-main
 	-
 	*/
+	system("pause");
+
 	delete lista;
 	delete ListaCl;
 	delete ListaVehiculos;
