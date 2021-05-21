@@ -1,10 +1,12 @@
 #include "Alquiler.h"
 
-Alquiler::Alquiler(Clientes* cliente, Vehiculo* vehiculo, bool elementosAdicionales, tm FechaInicio, tm FechaFin, string clave_)
+Alquiler::Alquiler(Clientes* cliente, Vehiculo* vehiculo, cElementosSeg* elemento1,
+    cElementosSeg* elemento2, tm FechaInicio, tm FechaFin, string clave_)
 {
     this->cliente = cliente;
     this->vehiculo = vehiculo;
-    this->elementosAdicionales = elementosAdicionales;
+    this->elemento1= elemento1;
+    this->elemento2 = elemento2;
     this->FechaInicio = FechaInicio;
     this->FechaFin = FechaFin;
     this->monto =0;
@@ -61,6 +63,8 @@ int Alquiler::CalcularTiempo()
     if(cantdias<=0)
         throw exc;
     return cantdias;*/
+    FechaInicio.tm_year -= 1900;
+    FechaFin.tm_year -= 1900;
 
     tm* fechaI = &FechaInicio;
     tm* fechaF = &FechaFin;

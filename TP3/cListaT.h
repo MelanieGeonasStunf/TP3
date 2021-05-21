@@ -228,12 +228,10 @@ unsigned int cListaT<T>::getItemPos(string clave)
 template<class T>
 inline ostream& cListaT<T>::operator<<(T &object)
 {
-	ostream &out;
-
+	ostream& out;
 	out << object.tostring();
 	return out;
 }
-
 
 /*template<class T>
  ostream& operator<<(ostream& salida, T &objeto)
