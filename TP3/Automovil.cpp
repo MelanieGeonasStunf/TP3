@@ -20,10 +20,6 @@ void Automovil::PasosMantenimiento()
 float Automovil::CalcularTarifa()
 {
     float precioAuto = preciodia + silladeseguridad * precioSillaSeg;
-    /*for (int i = 0; i < silladeseguridad; i++)
-    {
-        precioAuto = (silladeseguridad*precioSillaSeg + precioAuto)*dias;
-    }*/
     return precioAuto;
 }
 
@@ -34,4 +30,9 @@ string Automovil::tostring()
         + "Capacidad: " + to_string(capacidad) + '\n' + "Precio silla seguridad: " + to_string(precioSillaSeg) +
         '\n' + "Cantidad sillas seguridad: " + to_string(silladeseguridad);
     return cadena;
+}
+
+void Automovil::setElementosAdicionales()
+{
+
 }

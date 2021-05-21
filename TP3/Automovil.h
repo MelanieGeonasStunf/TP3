@@ -16,6 +16,7 @@ public:
 	void PasosMantenimiento();
 	float CalcularTarifa();
 	string tostring();
+	void setElementosAdicionales();
 	
 
 };

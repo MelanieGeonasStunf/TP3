@@ -27,13 +27,5 @@ float Camioneta::CalcularTarifa()
 {
     float precioCam = preciodia+silladeseguridad*precioSillaSeg;
     precioCam += portaequipaje * precioPortaEquip;
-   /* for (int i = 0; i < silladeseguridad; i++)
-    {
-        precioCam = precioSillaSeg+ dias*precioCam;
-    }
-    for (int i = 0; i < portaequipaje; i++)
-    {
-        precioCam = precioPortaEquip + dias*precioCam;
-    }*/
     return precioCam;
 }
