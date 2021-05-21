@@ -19,3 +19,13 @@ cElementosSeg::cElementosSeg(int tipo, int cant)
 cElementosSeg::~cElementosSeg()
 {
 }
+
+int cElementosSeg::getTipo()
+{
+	return tipo;
+}
+
+int cElementosSeg::getCant()
+{
+	return cant;
+}

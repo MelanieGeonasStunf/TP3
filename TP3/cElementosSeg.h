@@ -10,5 +10,8 @@ class cElementosSeg
 public:
 	cElementosSeg(int tipo, int cant);
 	~cElementosSeg();
+
+	int getTipo();
+	int getCant();
 };
 

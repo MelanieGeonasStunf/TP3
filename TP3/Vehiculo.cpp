@@ -52,3 +52,22 @@ string Vehiculo::getclave()
 	return numeroPatente;
 }
 
+/*string Vehiculo::tostring()
+{
+	string numeroPatente;
+	string color;
+	int numeroChasis;
+	int numeroPoliza;
+	tm FechaUltMantenimiento;
+	//float precioDia;//mepa que es static en cada clase
+	int capacidad;
+
+	string cadena = "Numero Patente: " + numeroPatente + '\n' +
+		"Color" + color + '\n' +
+		"Numero de Chasis: " + to_string(numeroChasis) + '\n' +
+		"Numero de Poliza: " + to_string(numeroPoliza) + '\n' +
+		"Fecha Ultimo Mantenimiento: " + to_string(FechaUltMantenimiento.tm_mday) + " / " +
+		to_string(FechaUltMantenimiento.tm_mon) + " / " + to_string(FechaUltMantenimiento.tm_year) + '\n' +
+		"Capacidad: " + to_string(capacidad);
+}*/
+

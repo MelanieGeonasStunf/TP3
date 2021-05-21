@@ -172,3 +172,5 @@ int cListaDeriv::TarifaTotal(int TarifaAuto, int TarifaMoto, int TarifaCam, int 
 	int TarifaTotal = TarifaAuto + TarifaMoto + TarifaCam + TarifaTrafic;
 	return TarifaTotal;
 }
+
+

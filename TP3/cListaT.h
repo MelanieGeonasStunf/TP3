@@ -44,6 +44,8 @@ public:
 	unsigned int getCA();
 	unsigned int getTAM();
 
+	//string toString();
+
 	//SOBRECARGA
 	void operator+(T* miObjeto);
 	// friend ostream& operator<< <>(ostream& out,  cListaT & object);
@@ -56,6 +58,8 @@ unsigned int cListaT<T>::getTAM()
 {
 	return TAM;
 }
+
+
 
 template<class T>
 unsigned int cListaT<T>::getCA()
@@ -255,6 +259,16 @@ template<class T>
 		 return NULL;*/
 }
 
+/* template<class T>
+ string cListaT<T>::toString()
+ {
+	string cadena;
+	 for (int i = 0; i < CA; i++)
+	 {
+		 cadena = vector[i];
+	 }
+	 return cadena;
+ }*/
 
 
  /*Ojo, no está bien llamar a lista. En primer lugar, lista no es nada en este ámbito que es el error que van a tener cuando traten de compilar esto

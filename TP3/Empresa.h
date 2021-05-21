@@ -10,8 +10,8 @@
 class Empresa
 {
 //public:
-	cListaT<Vehiculo> *ListaVehiculos;
-	cListaT<Clientes> *ListaClientes;
+	cListaT<Vehiculo> *ListaVehiculos;//
+	cListaT<Clientes> *ListaClientes;//
 	cListaDeriv*ListaAlquileres;
 	//Alquiler** ListaAlquileres;
 public:
