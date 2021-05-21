@@ -23,6 +23,7 @@ public:
 	virtual float CalcularTarifa()=0;
 	virtual void PasosMantenimiento()=0;
 	virtual string tostring()=0;
+	virtual void setElementosAdicionales()=0;
 	string getclave();
 
 	//virtual void AgregarElementosSeguridad();

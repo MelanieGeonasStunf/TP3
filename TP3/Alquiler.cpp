@@ -1,6 +1,6 @@
 #include "Alquiler.h"
 
-Alquiler::Alquiler(Clientes* cliente, Vehiculo* vehiculo, int elementosAdicionales, tm FechaInicio, tm FechaFin, string clave_)
+Alquiler::Alquiler(Clientes* cliente, Vehiculo* vehiculo, bool elementosAdicionales, tm FechaInicio, tm FechaFin, string clave_)
 {
     this->cliente = cliente;
     this->vehiculo = vehiculo;
@@ -54,15 +54,29 @@ void Alquiler::setmonto()
 
 int Alquiler::CalcularTiempo()
 {
-tm* fechaI = &FechaInicio;
+    /*long int fechaI = FechaInicio.tm_year * 10000 + FechaInicio.tm_mon * 100 + FechaInicio.tm_mday;
+    long int fechaF = FechaFin.tm_year * 10000 + FechaFin.tm_mon * 100 + FechaFin.tm_mday;
+    string exc = "\nLas fechas ingresadas no disponibles";
+    int cantdias = fechaF - fechaI;
+    if(cantdias<=0)
+        throw exc;
+    return cantdias;*/
+
+    tm* fechaI = &FechaInicio;
     tm* fechaF = &FechaFin;
     time_t inicio = mktime(fechaI);
     time_t fin = mktime(fechaF);
     double difference = difftime(fin, inicio);
     int dif = difference;
-    if (dif== 0)
+    if ((int)difference== 0)
         throw "fechas ingresadas no disponibles";
-    int dias =dif/86400;
+    int dias =(int)difference/86400;
     return dias;
+}
+
+void Alquiler::ElementosAdicionales()
+{
+    if (elementosAdicionales == true)
+        vehiculo->setElementosAdicionales();
 }
 
