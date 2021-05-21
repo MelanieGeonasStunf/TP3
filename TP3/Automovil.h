@@ -13,7 +13,7 @@ public:
 		int numeroPoliza, int capacidad, float precioSillaSeg);
 	~Automovil();
 	void PasosMantenimiento();
-	float CalcularTarifa(int dias);
+	float CalcularTarifa();
 	string tostring();
 	
 

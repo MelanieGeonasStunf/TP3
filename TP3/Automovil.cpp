@@ -17,16 +17,13 @@ void Automovil::PasosMantenimiento()
 {
 }
 
-float Automovil::CalcularTarifa(int dias)
+float Automovil::CalcularTarifa()
 {
-    if (dias == 0) {
-        //excep
-    }
-    float precioAuto = preciodia;
-    for (int i = 0; i < silladeseguridad; i++)
+    float precioAuto = preciodia + silladeseguridad * precioSillaSeg;
+    /*for (int i = 0; i < silladeseguridad; i++)
     {
         precioAuto = (silladeseguridad*precioSillaSeg + precioAuto)*dias;
-    }
+    }*/
     return precioAuto;
 }
 

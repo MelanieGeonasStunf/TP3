@@ -43,7 +43,7 @@ string Alquiler::getclave()
 void Alquiler::setmonto()
 {
     try {
-        float monto= vehiculo->CalcularTarifa(CalcularTiempo());
+        float monto=CalcularTiempo()*vehiculo->CalcularTarifa();
     }
     catch (string excep)
     {
