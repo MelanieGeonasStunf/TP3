@@ -12,6 +12,7 @@ public:
 	Automovil(string numeroPatente, string color, int numeroChasis, 
 		int numeroPoliza, int capacidad, float precioSillaSeg);
 	~Automovil();
+
 	void PasosMantenimiento();
 	float CalcularTarifa();
 	string tostring();
