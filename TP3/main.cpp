@@ -27,13 +27,22 @@ int main()
 	*ListaVehiculos + auto1;
 	*ListaVehiculos + moto1;
 	lista->OrdenarAlquileres(moto);//hacer con clista?
-	Alquiler1->setmonto();
+	try {
+		//Alquiler1->setmonto();
+	}
+	catch (string excep)
+	{
+		cout << excep;
+	}
 	/*FALTA HACER
-	-operadores
+	-iostream
 	-main
-	-
+	-mktime retorna -1
+	-El precio por dia es static? Se deberia definir en cada tipo de vehiculo?
+	-mantenimiento
 	*/
 	system("pause");
+	Vehiculo* autom = (*ListaVehiculos)[0];
 
 	delete lista;
 	delete ListaCl;

@@ -9,13 +9,13 @@ protected:
 	int numeroChasis;
 	int numeroPoliza;
 	tm FechaUltMantenimiento;
-	float precioDia;//mepa que es static en cada clase
+	//float precioDia;//mepa que es static en cada clase
 	int capacidad;
 	//static float tarifabase;
 
 
 public:
-	Vehiculo(string numeroPatente, string color, int numeroChasis, int numeroPoliza,float precioDia, int capacidad);
+	Vehiculo(string numeroPatente, string color, int numeroChasis, int numeroPoliza, int capacidad);
 	virtual ~Vehiculo();
 
 	void setFechaUltMantenimiento();

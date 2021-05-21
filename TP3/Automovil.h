@@ -5,11 +5,12 @@
 class Automovil :
 	public Vehiculo
 {
+	static float preciodia;
 	int silladeseguridad;
 	float precioSillaSeg;
 public:
 	Automovil(string numeroPatente, string color, int numeroChasis, 
-		int numeroPoliza, float precioDia, int capacidad, float precioSillaSeg);
+		int numeroPoliza, int capacidad, float precioSillaSeg);
 	~Automovil();
 
 	void PasosMantenimiento();

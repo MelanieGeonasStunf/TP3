@@ -54,12 +54,15 @@ void Alquiler::setmonto()
 
 int Alquiler::CalcularTiempo()
 {
-    time_t inicio = mktime(&FechaInicio);
-    time_t fin = mktime(&FechaFin);
+    tm* fechaI = &FechaInicio;
+    tm* fechaF = &FechaFin;
+    time_t inicio = mktime(fechaI);
+    time_t fin = mktime(fechaF);
     double difference = difftime(fin, inicio);
-    if (difference == 0)
+    int dif = difference;
+    if (dif== 0)
         throw "fechas ingresadas no disponibles";
-    int dias = (int)difference / 86400;
+    int dias =dif/86400;
     return dias;
 }
 
