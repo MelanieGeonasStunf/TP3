@@ -8,6 +8,7 @@ class Automovil :
 	static float preciodia;
 	int silladeseguridad;
 	float precioSillaSeg;
+
 public:
 	Automovil(string numeroPatente, string color, int numeroChasis, 
 		int numeroPoliza, int capacidad, float precioSillaSeg);
