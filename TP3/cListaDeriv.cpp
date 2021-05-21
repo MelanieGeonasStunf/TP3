@@ -96,59 +96,7 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 	delete[] trafics;
 	delete[] automoviles;
 	delete[] camionetas;
-	/*for (int i = 0; i < CA; i++)
-	{
-		if (vector[i] == NULL||vector[i]->vehiculo==NULL)
-			return;
 
-		Vehiculo *v = vector[i]->vehiculo;
-		Motocicleta *ptr = dynamic_cast<Motocicleta*>(v);
-		if (ptr != NULL)
-		{
-			aux[canttotal] = vector[i];
-			canttotal++;
-		}
-	}
-	for (int i = 0; i < CA; i++)
-	{
-		if (vector[i] == NULL || vector[i]->vehiculo == NULL)
-			return;
-		Vehiculo* v = vector[i]->vehiculo;
-		Automovil* ptr = dynamic_cast<Automovil*>(v);
-		if (ptr != NULL)
-		{
-			aux[canttotal] = vector[i];
-			canttotal++;
-		}
-
-	}
-	for (int i = 0; i < CA; i++)
-	{
-		if (vector[i] == NULL || vector[i]->vehiculo == NULL)
-			return;
-		Vehiculo* v = vector[i]->vehiculo;
-		Camioneta* ptr = dynamic_cast<Camioneta*>(v);
-		if (ptr != NULL)
-		{
-			aux[canttotal] = vector[i];
-			canttotal++;
-		}
-
-	}
-	for (int i = 0; i < CA; i++)
-	{
-		if (vector[i] == NULL || vector[i]->vehiculo == NULL)
-			return;
-		Vehiculo* v = vector[i]->vehiculo;
-		Trafic* ptr = dynamic_cast<Trafic*>(v);
-		if (ptr != NULL)
-		{
-			aux[canttotal] = vector[i];
-			canttotal++;
-		}
-	}
-	delete[] vector;
-	vector = aux;*/
 }
 
 int cListaDeriv::TarifaAuto()

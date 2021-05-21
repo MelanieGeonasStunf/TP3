@@ -19,16 +19,18 @@ int main()
 	//funcion para crear lista de vehiculos
 	Automovil* auto1 = new Automovil("MZU789", "Blanco", 1212, 11234,5, 200);
 	
+	cout << "hola";
 	//Motocicleta*moto1= new Motocicleta("IUM187","Negro", 1234, 30230, 2, 100,500);//el precio opcional se debe poer al crear el alquiler
 	//funcion para crear alquileres
-	cElementosSeg* elemento1;
-	Alquiler* Alquiler1 = new Alquiler(cl1,auto1, 2, { 00,00,00,15,02,2021 }, { 00,00,00,20,02,2021 }, "1234");//1 mes
+	cElementosSeg* elemento1= new cElementosSeg (casco, 2);
+	cElementosSeg* elemento2 = new cElementosSeg(sillaseguridad, 1);
+	Alquiler* Alquiler1 = new Alquiler(cl1,auto1, elemento1, elemento2, { 00,00,00,15,02,2021 }, { 00,00,00,20,02,2021 }, "1234");//1 mes
 	//Alquiler* Alquiler2 = new Alquiler(cl2, moto1, 2, { 0,0,0,20,6,2021 }, { 0,0,0,10,06,2021 }, "9234");//fechas negativas! bool de elementos adicionales
 	//no se que es el error
 	*ListaCl+cl1;
 	*ListaVehiculos + auto1;
-	*lista + Alquiler1;
-	cout << miEmpresa->getlistaAlq();
+	//*lista + Alquiler1;*/
+	cout <<*ListaVehiculos;
 	
 	//*lista + Alquiler2;
 	//*ListaVehiculos + moto1;

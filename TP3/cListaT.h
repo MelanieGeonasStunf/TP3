@@ -2,8 +2,15 @@
 #define NMAX 10
 
 #include <string>
+#include <iostream>
 
 using namespace std;
+
+/*template <class T>
+class cListaT;
+
+template<class T>
+ostream& operator<<(ostream& out,  cListaT <T>& object);*/
 
 template<class T>
 class cListaT
@@ -39,11 +46,10 @@ public:
 
 	//SOBRECARGA
 	void operator+(T* miObjeto);
-	//ostream& operator<<(ostream& out, const T& object);
-	ostream& operator<<(T& object);
-	//ostream& operator<<(ostream& salida, T &objeto);
+	// friend ostream& operator<< <>(ostream& out,  cListaT & object);
 	T* operator[](unsigned int pos);
 };
+
 
 template<class T>
 unsigned int cListaT<T>::getTAM()
@@ -226,21 +232,11 @@ unsigned int cListaT<T>::getItemPos(string clave)
 }
 
 template<class T>
-inline ostream& cListaT<T>::operator<<(T &object)
+void operator<<(ostream& o, cListaT<T>& object)
 {
-	ostream& out;
-	out << object.tostring();
-	return out;
+	o << "lista" << endl;
+	//return o;
 }
-
-/*template<class T>
- ostream& operator<<(ostream& salida, T &objeto)
-{
-	
-	 string obj_a_imprimir = to_string(objeto);
-	 salida << obj_a_imprimir;
-	 return salida;
-}*/
 
 template<class T>
 inline T* cListaT<T>::operator[](unsigned int pos)

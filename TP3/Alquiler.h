@@ -5,7 +5,7 @@
 #include "cElementosSeg.h"
 
 class Alquiler
-{
+{public:
 	friend class cListaDeriv;
 	Clientes* cliente;
 	Vehiculo* vehiculo;
@@ -15,7 +15,7 @@ class Alquiler
 	tm FechaFin;
 	float monto;
 	string clave;
-public:
+
 	Alquiler(Clientes *cliente, Vehiculo* vehiculo, cElementosSeg* elemento1, cElementosSeg* elemento2,
 		tm FechaInicio,tm FechaFin,string clave_);
 	~Alquiler();
@@ -25,5 +25,5 @@ public:
 	string getclave();
 	void setmonto();//creo un st monto donde llamo a calcular tarifa
 	int CalcularTiempo();
-	void ElementosAdicionales();
+	//void ElementosAdicionales();
 };

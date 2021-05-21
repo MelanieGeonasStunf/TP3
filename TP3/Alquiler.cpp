@@ -78,9 +78,5 @@ int Alquiler::CalcularTiempo()
     return dias;
 }
 
-void Alquiler::ElementosAdicionales()
-{
-    if (elementosAdicionales == true)
-        vehiculo->setElementosAdicionales();
-}
+
 
