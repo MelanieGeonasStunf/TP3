@@ -16,6 +16,6 @@ public:
 		int silladeseguridad, int portaequipaje, float precioSillaSeg, float precioPortaEquip);
 	string tostring();
 	void PasosMantenimiento();
-	float CalcularTarifa(int dias);
+	float CalcularTarifa();
 };
 

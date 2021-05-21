@@ -16,14 +16,9 @@ void Motocicleta::PasosMantenimiento()
 {
 }
 
-float Motocicleta::CalcularTarifa(int dias)
-{
-    if (dias == 0)
-    {
-        //excep
-    }
-    float precioMoto = preciodia;
-    precioMoto = casco*precioOpcional + dias*precioMoto;
+float Motocicleta::CalcularTarifa()
+{    
+    float precioMoto = casco*precioOpcional +preciodia;
     return precioMoto;
 }
 

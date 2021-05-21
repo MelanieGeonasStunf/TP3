@@ -23,20 +23,17 @@ void Camioneta::PasosMantenimiento()
 {
 }
 
-float Camioneta::CalcularTarifa(int dias)
+float Camioneta::CalcularTarifa()
 {
-    if(dias == 0)
-    {
-        //excep
-    }
-    float precioCam = preciodia;
-    for (int i = 0; i < silladeseguridad; i++)
+    float precioCam = preciodia+silladeseguridad*precioSillaSeg;
+    precioCam += portaequipaje * precioPortaEquip;
+   /* for (int i = 0; i < silladeseguridad; i++)
     {
         precioCam = precioSillaSeg+ dias*precioCam;
     }
     for (int i = 0; i < portaequipaje; i++)
     {
         precioCam = precioPortaEquip + dias*precioCam;
-    }
+    }*/
     return precioCam;
 }

@@ -162,7 +162,7 @@ int cListaDeriv::TarifaAuto()
 		Automovil* ptr = dynamic_cast<Automovil*>(v);
 		if (ptr != NULL)
 		{
-			Tarifa = ptr[i].CalcularTarifa(vector[i]->CalcularTiempo()) + Tarifa;
+			Tarifa = (vector[i]->CalcularTiempo())*ptr[i].CalcularTarifa() + Tarifa;
 		}
 	}
 	return Tarifa;
@@ -179,7 +179,7 @@ int cListaDeriv::TarifaMoto()
 		Motocicleta* ptr = dynamic_cast<Motocicleta*>(v);
 		if (ptr != NULL)
 		{
-			Tarifa = ptr[i].CalcularTarifa(vector[i]->CalcularTiempo()) + Tarifa;
+			Tarifa = (vector[i]->CalcularTiempo())* ptr[i].CalcularTarifa() + Tarifa;
 		}
 	}
 	return Tarifa;
@@ -196,13 +196,13 @@ int cListaDeriv::TarifaCamioneta()
 		Camioneta* ptr = dynamic_cast<Camioneta*>(v);
 		if (ptr != NULL)
 		{
-			Tarifa = ptr[i].CalcularTarifa(vector[i]->CalcularTiempo()) + Tarifa;
+			Tarifa = (vector[i]->CalcularTiempo())*ptr[i].CalcularTarifa() + Tarifa;
 		}
 	}
 	return Tarifa;
 }
 
-int cListaDeriv::TarifaTrafic()
+int cListaDeriv::TarifaTrafic()//hay que multiplicar por los dia?
 {
 	int Tarifa = 0;
 	for (int i = 0; i < CA; i++)
@@ -213,7 +213,7 @@ int cListaDeriv::TarifaTrafic()
 		Trafic* ptr = dynamic_cast<Trafic*>(v);
 		if (ptr != NULL)
 		{
-			Tarifa = ptr[i].CalcularTarifa(vector[i]->CalcularTiempo()) + Tarifa;
+			Tarifa =(vector[i]->CalcularTiempo())*ptr[i].CalcularTarifa() + Tarifa;
 		}
 	}
 	return Tarifa;

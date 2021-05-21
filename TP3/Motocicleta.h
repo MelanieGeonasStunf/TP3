@@ -14,7 +14,7 @@ public:
         int numeroPoliza, int capacidad, int casco, float precioOpcional);
     ~Motocicleta();
     void PasosMantenimiento();
-    float CalcularTarifa(int dias);
+    float CalcularTarifa();
     string tostring();
 
 };
