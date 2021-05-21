@@ -5,13 +5,14 @@
 class Trafic :
     public Vehiculo
 {
+    static float preciodia;
     int silladeseguridad;
     int asientorebatible;
     float precioSillaSeg;
     float precioAsiento;
 
 public:
-    Trafic(string numeroPatente, string color, int numeroChasis, int numeroPoliza, float precioDia, int capacidad, 
+    Trafic(string numeroPatente, string color, int numeroChasis, int numeroPoliza,int capacidad, 
         int silladeseguridad,int asientorebatible,float precioSillaSeg,float precioAsiento);
     ~Trafic();
     virtual void PasosMantenimiento();

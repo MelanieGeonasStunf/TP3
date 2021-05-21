@@ -1,13 +1,13 @@
 ﻿#include "Vehiculo.h"
 //static float tarifabase=
-Vehiculo::Vehiculo(string numeroPatente, string color, int numeroChasis, int numeroPoliza, float precioDia, int capacidad)
+Vehiculo::Vehiculo(string numeroPatente, string color, int numeroChasis, int numeroPoliza,int capacidad)
 {
 	this->numeroPatente = numeroPatente;
 	this->color = color;
 	this->numeroChasis = numeroChasis;
 	this->numeroPoliza = numeroPoliza;
 	this->FechaUltMantenimiento = { 0,0,0 };
-	this->precioDia = precioDia;
+	//this->precioDia = precioDia;
 	this->capacidad = capacidad;
 }
 

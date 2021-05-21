@@ -236,7 +236,7 @@ unsigned int cListaT<T>::getItemPos(string clave)
 template<class T>
 inline T* cListaT<T>::operator[](unsigned int pos)
 {
-	return T(pos);
+	return vector[pos];
 }
 
 

@@ -1,8 +1,8 @@
 #include "Automovil.h"
-
+float Automovil::preciodia = 4000;
 Automovil::Automovil(string numeroPatente, string color, int numeroChasis,int numeroPoliza,
-    float precioDia, int capacidad,float precioSillaSeg):Vehiculo(numeroPatente,
-        color,numeroChasis, numeroPoliza,precioDia, capacidad)
+   int capacidad,float precioSillaSeg):Vehiculo(numeroPatente,
+        color,numeroChasis, numeroPoliza,capacidad)
 {
     this->silladeseguridad = 0;
     this->precioSillaSeg = precioSillaSeg;
@@ -22,10 +22,10 @@ float Automovil::CalcularTarifa(int dias)
     if (dias == 0) {
         //excep
     }
-    float precioAuto = precioDia;
+    float precioAuto = preciodia;
     for (int i = 0; i < silladeseguridad; i++)
     {
-        precioAuto = precioSillaSeg + dias*precioAuto;
+        precioAuto = (silladeseguridad*precioSillaSeg + precioAuto)*dias;
     }
     return precioAuto;
 }
@@ -33,7 +33,7 @@ float Automovil::CalcularTarifa(int dias)
 string Automovil::tostring()
 {
     string cadena = "\nNumero Patente: " + numeroPatente + '\n' + "Color: " + color + '\n'
-        + "Numero Poliza: " + to_string(numeroPoliza) + '\n' + "Precio dia: " + to_string(precioDia) + '\n'
+        + "Numero Poliza: " + to_string(numeroPoliza) + '\n' + "Precio dia: " + to_string(preciodia) + '\n'
         + "Capacidad: " + to_string(capacidad) + '\n' + "Precio silla seguridad: " + to_string(precioSillaSeg) +
         '\n' + "Cantidad sillas seguridad: " + to_string(silladeseguridad);
     return cadena;
