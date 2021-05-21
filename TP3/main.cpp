@@ -27,7 +27,7 @@ int main()
 	*ListaCl+cl1;
 	*ListaVehiculos + auto1;
 	*lista + Alquiler1;
-	cout << miEmpresa->ListaVehiculos;
+	cout <<ListaVehiculos<<auto1;
 	//*lista + Alquiler2;
 	//*ListaVehiculos + moto1;
 	//lista->OrdenarAlquileres(moto);
