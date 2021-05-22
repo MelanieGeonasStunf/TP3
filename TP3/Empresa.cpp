@@ -12,6 +12,11 @@ Empresa::~Empresa()
 {
 }
 
+cListaDeriv* Empresa::getlistaAlq()
+{
+	return ListaAlquileres;
+}
+
 void Empresa::Alquilar(Alquiler* alquiler)
 {
 	try

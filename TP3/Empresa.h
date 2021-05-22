@@ -10,14 +10,17 @@
 class Empresa
 {
 //public:
-	cListaT<Vehiculo> *ListaVehiculos;
-	cListaT<Clientes> *ListaClientes;
+	cListaT<Vehiculo> *ListaVehiculos;//
+	cListaT<Clientes> *ListaClientes;//
 	cListaDeriv*ListaAlquileres;
 	//Alquiler** ListaAlquileres;
 public:
 	Empresa(cListaT<Vehiculo>* ListaVehiculos,cListaT<Clientes>* ListaClientes,
 	cListaDeriv* ListaAlquileres);
 	~Empresa();
+
+	cListaDeriv* getlistaAlq();
+
 	void Alquilar(Alquiler* alquiler);
 	void Adquirir(Vehiculo* vehiculo);
 	void Retirar(Vehiculo* vehiculo);

@@ -6,5 +6,6 @@
 //#include "cListaDeriv.h"
 enum {camioneta=0,automovil,trafic,moto};
 
+typedef enum {casco, sillaseguridad, asientorebatible, portaequipaje}elementosSeg;
 using namespace std;
 

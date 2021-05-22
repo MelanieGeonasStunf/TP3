@@ -25,7 +25,7 @@ public:
 	virtual string tostring()=0;
 	virtual void setElementosAdicionales()=0;
 	string getclave();
-
+	//string tostring();
 	//virtual void AgregarElementosSeguridad();
 	//SOBRECARGAR:
 	//impimir-> imprima datos de vehiculos

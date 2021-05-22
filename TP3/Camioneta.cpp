@@ -1,6 +1,8 @@
 #include "Camioneta.h"
 float Camioneta::preciodia = 5000;
-Camioneta::Camioneta(string numeroPatente, string color, int numeroChasis, int numeroPoliza,int capacidad, int silladeseguridad, int portaequipaje, float precioSillaSeg, float precioPortaEquip):Vehiculo(numeroPatente, color,
+Camioneta::Camioneta(string numeroPatente, string color, int numeroChasis,
+    int numeroPoliza,int capacidad, int silladeseguridad, int portaequipaje, 
+    float precioSillaSeg, float precioPortaEquip):Vehiculo(numeroPatente, color,
     numeroChasis, numeroPoliza,capacidad)
 {
     this->silladeseguridad = silladeseguridad;
@@ -20,6 +22,10 @@ string Camioneta::tostring()
 }
 
 void Camioneta::PasosMantenimiento()
+{
+}
+
+void Camioneta::setElementosAdicionales()
 {
 }
 

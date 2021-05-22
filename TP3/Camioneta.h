@@ -16,6 +16,7 @@ public:
 		int silladeseguridad, int portaequipaje, float precioSillaSeg, float precioPortaEquip);
 	string tostring();
 	void PasosMantenimiento();
+	void setElementosAdicionales();
 	float CalcularTarifa();
 };
 

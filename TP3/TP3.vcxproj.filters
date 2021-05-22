@@ -11,6 +11,7 @@
     <ClCompile Include="Motocicleta.cpp" />
     <ClCompile Include="Trafic.cpp" />
     <ClCompile Include="Vehiculo.cpp" />
+    <ClCompile Include="cElementosSeg.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alquiler.h" />
@@ -24,5 +25,6 @@
     <ClInclude Include="Motocicleta.h" />
     <ClInclude Include="Trafic.h" />
     <ClInclude Include="Vehiculo.h" />
+    <ClInclude Include="cElementosSeg.h" />
   </ItemGroup>
 </Project>

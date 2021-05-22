@@ -6,9 +6,11 @@
 #include "Camioneta.h"
 #include "Trafic.h"
 //template<class T>
+
 class cListaDeriv :
-    public cListaT<Alquiler>
+    public cListaT<Alquiler>//puedo ver todo lo de alquiler!!
 {
+
 public:
     cListaDeriv();
     ~cListaDeriv();
@@ -18,4 +20,5 @@ public:
    int TarifaCamioneta();
    int TarifaTrafic();
    int TarifaTotal(int TarifaAuto, int TarifaMoto, int TarifaCam, int TarifaTrafic);
+   //int CalcTarif();
 };

@@ -12,12 +12,22 @@ Motocicleta::~Motocicleta()
 {
 }
 
+/*void Motocicleta::setCascoyPrecio()
+{
+    if()
+}*/
+
+void Motocicleta::setElementosAdicionales()
+{
+}
+
 void Motocicleta::PasosMantenimiento()
 {
 }
 
 float Motocicleta::CalcularTarifa()
 {    
+
     float precioMoto = casco*precioOpcional +preciodia;
     return precioMoto;
 }
