@@ -3,21 +3,29 @@
 
 cElementosSeg::cElementosSeg(int tipo, int cant)
 {
+	precio = 0;
 	this->tipo = tipo;
 	if (tipo == casco)
-		this->precio = 80;
+		precio = 80;
 	if (tipo == sillaseguridad)
-		this->precio = 130;
+		precio = 130;
 	if (tipo == portaequipaje)
-		this->precio = 220;
+		precio = 220;
 	if (tipo == asientorebatible)
-		this->precio = 170;
+		precio = 170;
 
 	this->cant = cant;
 }
 
 cElementosSeg::~cElementosSeg()
 {
+}
+
+float cElementosSeg::CalcularTarifa()
+{
+	float Tarifa;
+	Tarifa = cant*precio;
+	return Tarifa;
 }
 
 int cElementosSeg::getTipo()

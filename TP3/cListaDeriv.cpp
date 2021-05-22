@@ -99,7 +99,7 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 
 }
 
-int cListaDeriv::TarifaAuto()
+int cListaDeriv::GananciaAuto()
 {
 	int Tarifa = 0;
 	for (int i = 0; i < CA; i++)
@@ -110,13 +110,13 @@ int cListaDeriv::TarifaAuto()
 		Automovil* ptr = dynamic_cast<Automovil*>(v);
 		if (ptr != NULL)
 		{
-			Tarifa = (vector[i]->CalcularTiempo())*ptr[i].CalcularTarifa() + Tarifa;
+			Tarifa = vector[i]->monto + Tarifa;
 		}
 	}
 	return Tarifa;
 }
 
-int cListaDeriv::TarifaMoto()
+int cListaDeriv::GananciaMoto()
 {
 	int Tarifa = 0;
 	for (int i = 0; i < CA; i++)
@@ -127,13 +127,13 @@ int cListaDeriv::TarifaMoto()
 		Motocicleta* ptr = dynamic_cast<Motocicleta*>(v);
 		if (ptr != NULL)
 		{
-			Tarifa = (vector[i]->CalcularTiempo())* ptr[i].CalcularTarifa() + Tarifa;
+			Tarifa = vector[i]->monto + Tarifa;
 		}
 	}
 	return Tarifa;
 }
 
-int cListaDeriv::TarifaCamioneta()
+int cListaDeriv::GananciaCamioneta()
 {
 	int Tarifa = 0;
 	for (int i = 0; i < CA; i++)
@@ -144,13 +144,13 @@ int cListaDeriv::TarifaCamioneta()
 		Camioneta* ptr = dynamic_cast<Camioneta*>(v);
 		if (ptr != NULL)
 		{
-			Tarifa = (vector[i]->CalcularTiempo())*ptr[i].CalcularTarifa() + Tarifa;
+			Tarifa = vector[i]->monto + Tarifa;
 		}
 	}
 	return Tarifa;
 }
 
-int cListaDeriv::TarifaTrafic()//hay que multiplicar por los dia?
+int cListaDeriv::GananciaTrafic()//hay que multiplicar por los dia?
 {
 	int Tarifa = 0;
 	for (int i = 0; i < CA; i++)
@@ -161,13 +161,13 @@ int cListaDeriv::TarifaTrafic()//hay que multiplicar por los dia?
 		Trafic* ptr = dynamic_cast<Trafic*>(v);
 		if (ptr != NULL)
 		{
-			Tarifa =(vector[i]->CalcularTiempo())*ptr[i].CalcularTarifa() + Tarifa;
+			Tarifa =vector[i]->monto + Tarifa;
 		}
 	}
 	return Tarifa;
 }
 
-int cListaDeriv::TarifaTotal(int TarifaAuto, int TarifaMoto, int TarifaCam, int TarifaTrafic)
+int cListaDeriv::GananciaTotal(int TarifaAuto, int TarifaMoto, int TarifaCam, int TarifaTrafic)
 {
 	int TarifaTotal = TarifaAuto + TarifaMoto + TarifaCam + TarifaTrafic;
 	return TarifaTotal;

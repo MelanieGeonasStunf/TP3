@@ -6,19 +6,13 @@ class Trafic :
     public Vehiculo
 {
     static float preciodia;
-    int silladeseguridad;
-    int asientorebatible;
-    float precioSillaSeg;
-    float precioAsiento;
 
 public:
-    Trafic(string numeroPatente, string color, int numeroChasis, int numeroPoliza,int capacidad, 
-        int silladeseguridad,int asientorebatible,float precioSillaSeg,float precioAsiento);
+    Trafic(string numeroPatente, string color, int numeroChasis, int numeroPoliza,int capacidad);
     ~Trafic();
     virtual void PasosMantenimiento();
-    float CalcularTarifa();
-    void setElementosAdicionales();
     string tostring();
+    float getprecioDia();
 
 };
 

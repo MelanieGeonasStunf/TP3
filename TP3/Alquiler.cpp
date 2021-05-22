@@ -11,16 +11,12 @@ Alquiler::Alquiler(Clientes* cliente, Vehiculo* vehiculo, cElementosSeg* element
     this->FechaFin = FechaFin;
     this->monto =0;
     this->clave = clave_;
+    //setmonto();//-> se puede settear en el constructor
 }
 
 Alquiler::~Alquiler()
 {
 }
-
-/*const int Alquiler::getclave()
-{
-    return clave;
-}*/
 
 string Alquiler::tostring()
 {
@@ -49,8 +45,13 @@ string Alquiler::getclave()
 void Alquiler::setmonto()
 {
     try {
+        VerificarTipo();
         float cantdias = CalcularTiempo();
-        float monto = (cantdias) * float(vehiculo->CalcularTarifa());
+        float monto = cantdias * vehiculo->getprecioDia();
+        if (elemento1 != NULL)
+            monto += cantdias * elemento1->CalcularTarifa();
+        if (elemento2 != NULL)
+            monto += cantdias * elemento2->CalcularTarifa();
         this->monto = monto;
     }
     catch (string excep)
@@ -74,6 +75,44 @@ int Alquiler::CalcularTiempo()
         throw "Fechas ingresadas no disponibles";
     int dias =(int)difference/86400;
     return dias;
+}
+
+void Alquiler::VerificarTipo()
+{
+    string excep = "No se puede agregar este elemento adicional al vehiculo";
+    if (elemento1 != NULL)
+    {
+        Vehiculo* v = vehiculo;
+        Automovil* autom=dynamic_cast<Automovil*>(v);
+        if (autom != NULL && elemento1->getTipo() != 1)
+            throw excep;
+        Motocicleta* moto = dynamic_cast<Motocicleta*>(v);
+        if (moto != NULL && elemento1->getTipo() != 0)
+            throw excep;
+        Camioneta* cam = dynamic_cast<Camioneta*>(v);
+        if (cam != NULL && (elemento1->getTipo() !=1 || elemento1->getTipo()!=3 ))
+            throw excep;
+        Trafic* traf = dynamic_cast<Trafic*>(v);
+        if (traf != NULL && (elemento1->getTipo() != 2 || elemento1->getTipo()!=3))
+            throw excep;
+    }
+    if (elemento2 != NULL)//en el caso que el elemento de seguridad 1 no concuerda con el vehiculo tira
+        //la excepcion sin importar si el elemento 2 concuerda
+    {
+        Vehiculo* v = vehiculo;
+        Automovil* autom = dynamic_cast<Automovil*>(v);
+        if (autom != NULL && elemento2->getTipo() != 1)
+            throw excep;
+        Motocicleta* moto = dynamic_cast<Motocicleta*>(v);
+        if (moto != NULL && elemento2->getTipo() != 0)
+            throw excep;
+        Camioneta* cam = dynamic_cast<Camioneta*>(v);
+        if (cam != NULL && (elemento2->getTipo() != 1 || elemento2->getTipo() != 3))
+            throw excep;
+        Trafic* traf = dynamic_cast<Trafic*>(v);
+        if (traf != NULL && (elemento2->getTipo() != 2 || elemento2->getTipo() != 3))
+            throw excep;
+    }
 }
 
 

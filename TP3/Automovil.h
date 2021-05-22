@@ -6,19 +6,14 @@ class Automovil :
 	public Vehiculo
 {
 	static float preciodia;
-	int silladeseguridad;
-	float precioSillaSeg;
 
 public:
 	Automovil(string numeroPatente, string color, int numeroChasis, 
-		int numeroPoliza, int capacidad, float precioSillaSeg);
+		int numeroPoliza, int capacidad);
 	~Automovil();
 
-	void PasosMantenimiento();
-	float CalcularTarifa();
+	void PasosMantenimiento();//
 	string tostring();
-	void setElementosAdicionales();
-	
-
+	float getprecioDia();
 };
 

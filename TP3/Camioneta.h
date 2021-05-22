@@ -6,17 +6,12 @@ class Camioneta:
 	public Vehiculo
 {
 	static float preciodia;
-	int silladeseguridad;
-	int portaequipaje;
-	float precioSillaSeg;
-	float precioPortaEquip;
+	
 public:
 	Camioneta(string numeroPatente, string color, int numeroChasis,
-		int numeroPoliza, int capacidad,
-		int silladeseguridad, int portaequipaje, float precioSillaSeg, float precioPortaEquip);
+		int numeroPoliza, int capacidad);
 	string tostring();
 	void PasosMantenimiento();
-	void setElementosAdicionales();
-	float CalcularTarifa();
+	float getprecioDia();
 };
 
