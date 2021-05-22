@@ -17,6 +17,10 @@ Motocicleta::~Motocicleta()
     if()
 }*/
 
+void Motocicleta::setElementosAdicionales()
+{
+}
+
 void Motocicleta::PasosMantenimiento()
 {
 }

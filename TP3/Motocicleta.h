@@ -16,7 +16,8 @@ public:
         int numeroPoliza, int capacidad,int casco, float precioOpcional);
     ~Motocicleta();
 
-    void setCascoyPrecio();
+   // void setCascoyPrecio();
+    void setElementosAdicionales();
 
     void PasosMantenimiento();
     float CalcularTarifa();

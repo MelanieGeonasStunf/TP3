@@ -49,24 +49,18 @@ string Alquiler::getclave()
 void Alquiler::setmonto()
 {
     try {
-        float monto=CalcularTiempo()*vehiculo->CalcularTarifa();
+        float cantdias = CalcularTiempo();
+        float monto = (cantdias) * float(vehiculo->CalcularTarifa());
+        this->monto = monto;
     }
     catch (string excep)
     {
         throw excep;
     }
-    this->monto = monto;
 }
 
 int Alquiler::CalcularTiempo()
 {
-    /*long int fechaI = FechaInicio.tm_year * 10000 + FechaInicio.tm_mon * 100 + FechaInicio.tm_mday;
-    long int fechaF = FechaFin.tm_year * 10000 + FechaFin.tm_mon * 100 + FechaFin.tm_mday;
-    string exc = "\nLas fechas ingresadas no disponibles";
-    int cantdias = fechaF - fechaI;
-    if(cantdias<=0)
-        throw exc;
-    return cantdias;*/
     FechaInicio.tm_year -= 1900;
     FechaFin.tm_year -= 1900;
 
@@ -77,7 +71,7 @@ int Alquiler::CalcularTiempo()
     double difference = difftime(fin, inicio);
     int dif = difference;
     if ((int)difference== 0)
-        throw "fechas ingresadas no disponibles";
+        throw "Fechas ingresadas no disponibles";
     int dias =(int)difference/86400;
     return dias;
 }

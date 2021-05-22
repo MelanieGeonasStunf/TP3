@@ -30,6 +30,10 @@ float Trafic::CalcularTarifa()
     return precioTrafic;
 }
 
+void Trafic::setElementosAdicionales()
+{
+}
+
 string Trafic::tostring()
 {
     string cadena = "\nNumero Patente: " + numeroPatente + '\n' + "Color: " + color + '\n'

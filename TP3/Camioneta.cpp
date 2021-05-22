@@ -25,6 +25,10 @@ void Camioneta::PasosMantenimiento()
 {
 }
 
+void Camioneta::setElementosAdicionales()
+{
+}
+
 float Camioneta::CalcularTarifa()
 {
     float precioCam = preciodia+silladeseguridad*precioSillaSeg;

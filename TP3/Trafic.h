@@ -17,6 +17,7 @@ public:
     ~Trafic();
     virtual void PasosMantenimiento();
     float CalcularTarifa();
+    void setElementosAdicionales();
     string tostring();
 
 };
