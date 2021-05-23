@@ -182,7 +182,7 @@ void cListaT<T>::Eliminar(string clave) {
 	if (pos < CA)
 		Eliminar(pos);
 	//sino algo
-
+	//EXCEPCION
 }
 template<class T>
 void cListaT<T>::Eliminar(const T *item) {
@@ -250,7 +250,7 @@ inline T* cListaT<T>::operator[](unsigned int pos)
 template<class T>
  inline void cListaT<T>::operator+( T* miObjeto)
 {
-	 if (AgregarItem(miObjeto) == false) //Miren la nota al final de este archivo
+	 if (AgregarItem(miObjeto) == false) 
 		 throw "No se pudo agregar.";
 	 
 	 /*else
@@ -263,16 +263,7 @@ template<class T>
 	string cadena;
 	 for (int i = 0; i < CA; i++)
 	 {
-		 cadena = vector[i]->tostring();
+		 cadena += vector[i]->tostring();
 	 }
 	 return cadena;
  }
-
-
- /*Ojo, no está bien llamar a lista. En primer lugar, lista no es nada en este ámbito que es el error que van a tener cuando traten de compilar esto
-no sé si se quieren referir a vector, en cuyo caso tampcoo está bien porque vector es solamente eso, un vector,
-entonces lo que tienen que hacer es acceder directamente al método AgregarItem, es un método adentro de la misma clase entonces no vana  a tener problemas.
-Por otra parte, tenía varios errores en el operator, en primer lugar les faltaba el operador de ámbito. En segundo lugar,
-la sobrecarga solo puede recibir un parámetro, que es el que va a ir a la derecha del operador. El operador es como un método
-entonces ya está implícito que lo voy a acceder desde un objeto de esta clase (lo que va a la izquierda del operador) (por eso lista está mal)
-Por otra parte, no me parece que el operador + deba devolver nada. A lo sumo podría devolver un bool*/

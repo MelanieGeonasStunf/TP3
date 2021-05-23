@@ -39,19 +39,33 @@ int main()
 	//probar que anda el programa
 	Alquiler* Alquiler1 = new Alquiler(cl1,auto1, elemento1, elemento2, { 00,00,00,15,02,2021 }
 	, { 00,00,00,20,02,2021 }, "1234");//1 mes
+	try {
+		Alquiler1->setmonto();
+	}
+	catch (string excep)
+	{
+		cout << excep;
+
+	}
+	
+
 	Alquiler* Alquiler2 = new Alquiler(cl2, moto1, elemento1, elemento2, { 0,0,0,20,6,2021 }, 
-		{ 0,0,0,10,7,2021 }, "9234");//bool de elementos adicionales
+	{ 0,0,0,10,7,2021 }, "9234");//bool de elementos adicionales
+	
 	Alquiler* Alquiler3 = new Alquiler(cl1, cam, elemento2, elemento3, { 00,00,00,11,05,2021 }
 	, { 00,00,00,23,01,2022 }, "505");
 	//MANEJAR EXCEPCION AGREGARITEM
+	
 	
 	*lista + Alquiler1;
 	*lista + Alquiler2;
 	*lista + Alquiler3;
 
-	//lista->OrdenarAlquileres(moto);
+	cout << *lista;
 
-	for (int i = 0; i < lista->CA; i++)
+	lista->OrdenarAlquileres(moto);
+
+	/*for (int i = 0; i < lista->CA; i++)
 	{
 		try {
 			lista->vector[i]->setmonto();
@@ -59,10 +73,12 @@ int main()
 		catch (string excep)
 		{
 			cout << excep;
+			lista->Eliminar(lista->vector[i]->getclave());
+			i--;
 		}
-	}//hacer con clista?
+	}//hacer con clista?*/
 
-	cout << *ListaVehiculos;
+	//cout << *ListaVehiculos;
 
 	/*FALTA HACER
 	-.

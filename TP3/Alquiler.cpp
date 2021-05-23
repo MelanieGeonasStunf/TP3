@@ -83,6 +83,7 @@ void Alquiler::VerificarTipo()
     if (elemento1 != NULL)
     {
         Vehiculo* v = vehiculo;
+
         Automovil* autom=dynamic_cast<Automovil*>(v);
         if (autom != NULL && elemento1->getTipo() != 1)
             throw excep;

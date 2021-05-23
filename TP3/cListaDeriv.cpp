@@ -35,9 +35,9 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 			{
 				camionetas[cant_camioneta] = vector[i];
 				cant_camioneta++;
-				//imprimir
 			}
 		}
+		cout << camionetas;
 		break;
 	case automovil:
 		for (int i = 0; i < CA; i++)
@@ -50,9 +50,9 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 			{
 				automoviles[cant_automovil] = vector[i];
 				cant_automovil++;
-				//imprimir
 			}
 		}
+		cout << automoviles;
 		break;
 	case trafic:
 		for (int i = 0; i < CA; i++)
@@ -65,9 +65,9 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 			{
 				trafics[cant_trafic] = vector[i];
 				cant_trafic++;
-				//imprimir
 			}
 		}
+		cout << trafics;
 		break;
 	case moto:
 		for (int i = 0; i < CA; i++)
@@ -78,11 +78,11 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 			Motocicleta* ptr = dynamic_cast<Motocicleta*>(v);
 			if (ptr != NULL)
 			{
-				camionetas[cant_motocicletas] = vector[i];
+				motos[cant_motocicletas] = vector[i];
 				cant_motocicletas++;
-				//imprimir
 			}
 		}
+		cout << motos;
 		break;
 	}
 	for (int i = 0; i < CA; i++)
@@ -150,7 +150,7 @@ int cListaDeriv::GananciaCamioneta()
 	return Tarifa;
 }
 
-int cListaDeriv::GananciaTrafic()//hay que multiplicar por los dia?
+int cListaDeriv::GananciaTrafic()
 {
 	int Tarifa = 0;
 	for (int i = 0; i < CA; i++)
