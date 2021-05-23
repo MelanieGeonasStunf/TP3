@@ -160,6 +160,7 @@
     <ClCompile Include="Clientes.cpp" />
     <ClCompile Include="cListaDeriv.cpp" />
     <ClCompile Include="Empresa.cpp" />
+    <ClCompile Include="funciones.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Motocicleta.cpp" />
     <ClCompile Include="Trafic.cpp" />

@@ -12,6 +12,7 @@
     <ClCompile Include="Trafic.cpp" />
     <ClCompile Include="Vehiculo.cpp" />
     <ClCompile Include="cElementosSeg.cpp" />
+    <ClCompile Include="funciones.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Alquiler.h" />
