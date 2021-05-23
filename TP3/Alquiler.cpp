@@ -11,7 +11,6 @@ Alquiler::Alquiler(Clientes* cliente, Vehiculo* vehiculo, cElementosSeg* element
     this->FechaFin = FechaFin;
     this->monto =0;
     this->clave = clave_;
-    //setmonto();//-> se puede settear en el constructor
 }
 
 Alquiler::~Alquiler()

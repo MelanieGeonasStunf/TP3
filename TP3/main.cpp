@@ -39,15 +39,6 @@ int main()
 	//probar que anda el programa
 	Alquiler* Alquiler1 = new Alquiler(cl1,auto1, elemento1, elemento2, { 00,00,00,15,02,2021 }
 	, { 00,00,00,20,02,2021 }, "1234");//1 mes
-	try {
-		Alquiler1->setmonto();
-	}
-	catch (string excep)
-	{
-		cout << excep;
-
-	}
-	
 
 	Alquiler* Alquiler2 = new Alquiler(cl2, moto1, elemento1, elemento2, { 0,0,0,20,6,2021 }, 
 	{ 0,0,0,10,7,2021 }, "9234");//bool de elementos adicionales
@@ -56,10 +47,14 @@ int main()
 	, { 00,00,00,23,01,2022 }, "505");
 	//MANEJAR EXCEPCION AGREGARITEM
 	
-	
-	*lista + Alquiler1;
-	*lista + Alquiler2;
-	*lista + Alquiler3;
+	setMonto1(Alquiler1);
+	//setMonto1(Alquiler2);
+//	setMonto1(Alquiler3);
+
+	if(Alquiler1 != NULL)
+		*lista + Alquiler1;
+	//*lista + Alquiler2;
+	//*lista + Alquiler3;
 
 	cout << *lista;
 
