@@ -40,9 +40,6 @@ void Empresa::Alquilar(Alquiler* alquiler)
 	try
 	{
 		*ListaAlquileres + alquiler;
-		/*if (ListaAlquileres[ListaAlquileres->CA].AgregarItem(alquiler)== true || 
-			ListaClientes[ListaClientes->CA].AgregarItem(alquiler->getCliente())==true)
-			return;*/
 	}
 	catch (Alquiler* Alquiler)
 	{

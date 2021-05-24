@@ -18,25 +18,86 @@ cListaT<Clientes>* ListandoClientes()
 {
 	cListaT<Clientes>* lista = new cListaT<Clientes>();
 	Clientes* cl1 = new Clientes("Damon Salvatore", "1000601");
-	*lista + cl1;//poner excep
+	try {
+		*lista + cl1;
+	}
+	catch(Clientes* cl1)
+	{
+		cout << "No se puede agregar al cliente " << cl1->getclave() << endl;
+	}
 	cl1 = new Clientes("Stefan Salvatore", "1033931");
-	*lista + cl1;
+	try {
+		*lista + cl1;
+	}
+	catch (Clientes* cl1)
+	{
+		cout << "No se puede agregar al cliente " << cl1->getclave() << endl;
+	}
 	cl1 = new Clientes("Elena Gilbert", "40992310");
-	*lista + cl1;
+	try {
+		*lista + cl1;
+	}
+	catch (Clientes* cl1)
+	{
+		cout << "No se puede agregar al cliente " << cl1->getclave() << endl;
+	}
 	cl1 = new Clientes("Caroline Forbes", "41002123");
-	*lista + cl1;
+	try {
+		*lista + cl1;
+	}
+	catch (Clientes* cl1)
+	{
+		cout << "No se puede agregar al cliente " << cl1->getclave() << endl;
+	}
 	cl1 = new Clientes("Bonnie Bennett", "40222134");
-	*lista + cl1;
+	try {
+		*lista + cl1;
+	}
+	catch (Clientes* cl1)
+	{
+		cout << "No se puede agregar al cliente " << cl1->getclave() << endl;
+	}
 	cl1 = new Clientes("Klaus Mikaelson", "00000100");
-	*lista + cl1;
+	try {
+		*lista + cl1;
+	}
+	catch (Clientes* cl1)
+	{
+		cout << "No se puede agregar al cliente " << cl1->getclave() << endl;
+	}
 	cl1 = new Clientes("Katerina Petrova", "00900100");
-	*lista + cl1;
+	try
+	{
+		*lista + cl1;
+	}
+	catch (Clientes* cl1)
+	{
+		cout << "No se puede agregar al cliente " << cl1->getclave() << endl;
+	}
 	cl1 = new Clientes("Tyler Lockwood", "40900120");
-	*lista + cl1;
+	try {
+		*lista + cl1;
+	}
+	catch (Clientes* cl1)
+	{
+		cout << "No se puede agregar al cliente " << cl1->getclave() << endl;
+	}
 	cl1 = new Clientes("Jeremy Gilbert", "42121933");
-	*lista + cl1;
+	try {
+		*lista + cl1;
+	}
+	catch (Clientes* cl1)
+	{
+		cout << "No se puede agregar al cliente " << cl1->getclave() << endl;
+	}
 	cl1 = new Clientes("Alaric Saltzman", "32441209");
-	*lista + cl1;
+	try {
+		*lista + cl1;
+	}
+	catch (Clientes* cl1)
+	{
+		cout << "No se puede agregar al cliente " << cl1->getclave() << endl;
+	}
 	return lista;
 }
 void ListandoVehiculos(Empresa*emp)
@@ -73,6 +134,7 @@ void ListandoVehiculos(Empresa*emp)
 	{
 		cout << "\nNo se pudo agregar el vehiculo " << v->getclave() << " a la lista." << endl;
 	}
+	//std::cout << cam1->PasosMantenimiento();
 	auto1 = new Automovil("HIJ999", "Rojo", 1212,394034, 5);
 	try {
 		emp->Adquirir(auto1);
