@@ -37,7 +37,7 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 				cant_camioneta++;
 			}
 		}
-		cout << camionetas;
+		cout << *camionetas;
 		break;
 	case automovil:
 		for (int i = 0; i < CA; i++)
@@ -52,7 +52,7 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 				cant_automovil++;
 			}
 		}
-		cout << automoviles;
+		cout << *automoviles;
 		break;
 	case trafic:
 		for (int i = 0; i < CA; i++)
@@ -67,7 +67,7 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 				cant_trafic++;
 			}
 		}
-		cout << trafics;
+		cout << *trafics;
 		break;
 	case moto:
 		for (int i = 0; i < CA; i++)
@@ -82,7 +82,7 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 				cant_motocicletas++;
 			}
 		}
-		cout << motos;
+		cout << *motos;
 		break;
 	}
 	for (int i = 0; i < CA; i++)
