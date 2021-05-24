@@ -27,6 +27,7 @@ public:
 	string tostring();
 	Clientes* getCliente();
 	string getclave();
+	Vehiculo* getVeh();
 	void setmonto();//creo un st monto donde llamo a calcular tarifa
 	int CalcularTiempo();
 	void VerificarTipo();//-> verifica que el tipo de elemento adicional concuerde con el vehiculo

@@ -10,7 +10,7 @@ class Trafic :
 public:
     Trafic(string numeroPatente, string color, int numeroChasis, int numeroPoliza,int capacidad);
     ~Trafic();
-    virtual void PasosMantenimiento();
+    string PasosMantenimiento();
     string tostring();
     float getprecioDia();
 

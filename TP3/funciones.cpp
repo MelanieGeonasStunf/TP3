@@ -134,7 +134,7 @@ void ListandoVehiculos(Empresa*emp)
 	{
 		cout << "\nNo se pudo agregar el vehiculo " << v->getclave() << " a la lista." << endl;
 	}
-	//std::cout << cam1->PasosMantenimiento();
+	
 	auto1 = new Automovil("HIJ999", "Rojo", 1212,394034, 5);
 	try {
 		emp->Adquirir(auto1);

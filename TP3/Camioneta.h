@@ -11,7 +11,7 @@ public:
 	Camioneta(string numeroPatente, string color, int numeroChasis,
 		int numeroPoliza, int capacidad);
 	string tostring();
-	void PasosMantenimiento();
+	string PasosMantenimiento();
 	float getprecioDia();
 };
 

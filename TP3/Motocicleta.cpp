@@ -11,16 +11,12 @@ Motocicleta::~Motocicleta()
 {
 }
 
-/*void Motocicleta::setCascoyPrecio()
+
+string Motocicleta::PasosMantenimiento()
 {
-    if()
-}*/
-
-
-void Motocicleta::PasosMantenimiento()
-{
-    string pasosMant = "- Lubricacion de las guayas";
-
+    string pasosMant = PasosMantenimientoVeh();
+    pasosMant += "- Lubricacion de las guayas\n";
+    return pasosMant;
 }
 
 string Motocicleta::tostring()

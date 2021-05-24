@@ -28,6 +28,7 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			{
 				camionetas->vector[cant_camioneta] = vector[i];
 				cant_camioneta++;
+				camionetas->CA = cant_camioneta;
 			}
 		}
 		cout << *camionetas;
@@ -43,6 +44,7 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			{
 				automoviles->vector[cant_automovil] = vector[i];
 				cant_automovil++;
+				automoviles->CA = cant_automovil;
 			}
 		}
 		cout << *automoviles;
@@ -58,6 +60,7 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			{
 				trafics->vector[cant_trafic] = vector[i];
 				cant_trafic++;
+				trafics->CA = cant_trafic;
 			}
 		}
 		cout << *trafics;
@@ -73,6 +76,7 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			{
 				motos->vector[cant_motocicletas] = vector[i];
 				cant_motocicletas++;
+				motos->CA = cant_motocicletas;
 			}
 		}
 		cout << *motos;

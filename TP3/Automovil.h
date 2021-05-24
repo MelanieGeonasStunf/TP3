@@ -12,7 +12,7 @@ public:
 		int numeroPoliza, int capacidad);
 	~Automovil();
 
-	void PasosMantenimiento();//
+	string PasosMantenimiento();//
 	string tostring();
 	float getprecioDia();
 };

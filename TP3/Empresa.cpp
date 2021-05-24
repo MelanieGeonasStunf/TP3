@@ -39,6 +39,7 @@ void Empresa::Alquilar(Alquiler* alquiler)
 	}
 	try
 	{
+		Mantenimiento(alquiler->getVeh());
 		*ListaAlquileres + alquiler;
 	}
 	catch (Alquiler* Alquiler)
@@ -46,17 +47,15 @@ void Empresa::Alquilar(Alquiler* alquiler)
 		throw "No se pudo alquilar el vehiculo: "+Alquiler->getclave()+'\n';
 	}
 
-	//deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw
 }
 
 void Empresa::Adquirir(Vehiculo* veh)
 {
 	// agrega un vehiculo lista vehiculos
-	//deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw
 	try
 	{
 		*ListaVehiculos + veh;
-		//if (ListaVehiculos[ListaVehiculos->CA].AgregarItem(vehiculo) == true)
+		Mantenimiento(veh);
 		return;
 	}
 	catch (Vehiculo*veh)
@@ -69,7 +68,7 @@ void Empresa::Adquirir(Vehiculo* veh)
 void Empresa::Retirar(Vehiculo* vehiculo)
 {
 	// quita vehiculo lista vehiculos
-	ListaVehiculos[ListaVehiculos->CA].Quitar(vehiculo); //quitar o eliminar?
+	ListaVehiculos[ListaVehiculos->CA].Quitar(vehiculo);
 }
 
 void Empresa::Mantenimiento(Vehiculo* vehiculo)

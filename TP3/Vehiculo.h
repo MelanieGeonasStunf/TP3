@@ -20,10 +20,12 @@ public:
 
 	void setFechaUltMantenimiento();
 
-	virtual void PasosMantenimiento()=0;
+	virtual string PasosMantenimiento()=0;
 	virtual string tostring()=0;
 	virtual float getprecioDia() = 0;
 	string getclave();
+	string PasosMantenimientoVeh();
+
 	//string tostring();
 	//virtual void AgregarElementosSeguridad();
 	//SOBRECARGAR:

@@ -14,7 +14,7 @@ public:
 
    // void setCascoyPrecio();
 
-    void PasosMantenimiento();
+    string PasosMantenimiento();
     string tostring();
     float getprecioDia();
 };

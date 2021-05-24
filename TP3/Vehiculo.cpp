@@ -1,5 +1,5 @@
 ﻿#include "Vehiculo.h"
-//static float tarifabase=
+
 Vehiculo::Vehiculo(string numeroPatente, string color, int numeroChasis, int numeroPoliza,int capacidad)
 {
 	this->numeroPatente = numeroPatente;
@@ -7,7 +7,6 @@ Vehiculo::Vehiculo(string numeroPatente, string color, int numeroChasis, int num
 	this->numeroChasis = numeroChasis;
 	this->numeroPoliza = numeroPoliza;
 	this->FechaUltMantenimiento = { 0,0,0 };
-	//this->precioDia = precioDia;
 	this->capacidad = capacidad;
 }
 
@@ -24,12 +23,17 @@ void Vehiculo::setFechaUltMantenimiento()
 	FechaUltMantenimiento = *info;
 }
 
-void Vehiculo::PasosMantenimiento()
+string Vehiculo::getclave()
 {
-	string linea = "- Revision de frenos";
-	string pasosMant = " -Cambio de filtros y de aceite" + '\n' +
+	return numeroPatente;
+}
+
+string Vehiculo::PasosMantenimientoVeh()
+{
+	string linea = "\n- Revision de frenos";
+	string pasosMant = "\t- Cambio de filtros y de aceite" + '\n' +
 		linea + '\n' +
-		"- Revision Neumáticos" + '\n' +
+		"- Revision Neumaticos" + '\n' +
 		"- Amortiguadores" + '\n' +
 		"- Revision de las luces " + '\n' +
 		"- Correa del motor" + '\n' +
@@ -43,29 +47,5 @@ void Vehiculo::PasosMantenimiento()
 		"- Bujias" + '\n' +
 		"- Limpieza y encerado" + '\n';
 
+	return pasosMant;
 }
-
-string Vehiculo::getclave()
-{
-	return numeroPatente;
-}
-
-/*string Vehiculo::tostring()
-{
-	string numeroPatente;
-	string color;
-	int numeroChasis;
-	int numeroPoliza;
-	tm FechaUltMantenimiento;
-	//float precioDia;//mepa que es static en cada clase
-	int capacidad;
-
-	string cadena = "Numero Patente: " + numeroPatente + '\n' +
-		"Color" + color + '\n' +
-		"Numero de Chasis: " + to_string(numeroChasis) + '\n' +
-		"Numero de Poliza: " + to_string(numeroPoliza) + '\n' +
-		"Fecha Ultimo Mantenimiento: " + to_string(FechaUltMantenimiento.tm_mday) + " / " +
-		to_string(FechaUltMantenimiento.tm_mon) + " / " + to_string(FechaUltMantenimiento.tm_year) + '\n' +
-		"Capacidad: " + to_string(capacidad);
-}*/
-

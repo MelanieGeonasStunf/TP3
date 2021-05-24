@@ -15,10 +15,11 @@ string Camioneta::tostring()
     return cadena;
 }
 
-void Camioneta::PasosMantenimiento()
+string Camioneta::PasosMantenimiento()
 {
-    string pasosMant = "- Liquido limpiador de parabrisas \n- Lubricacion de chasis";
-
+    string pasosMant = PasosMantenimientoVeh();
+    pasosMant += "- Liquido limpiador de parabrisas \n- Lubricacion de chasis\n";
+    return pasosMant;
 }
 
 float Camioneta::getprecioDia()

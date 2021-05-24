@@ -16,10 +16,11 @@ int main()
 	miEmpresa->getlistaAlq()->ListarAlquileres(automovil);
 	delete miEmpresa;
 	system("pause");
-	
-	
-
 }
 
-/*Sabemos que puede haber varios alquileres con un mismo vehiculo (en distintas fechas), pero al tener
-que utilizar las funciones de lista template no podemos*/
+/*
+ - Sabemos que puede haber varios alquileres con un mismo vehiculo (en distintas fechas), pero al tener
+que utilizar las funciones de lista template no podemos
+ - Se imprime medio mal los pasos de mantenimiento 
+
+*/

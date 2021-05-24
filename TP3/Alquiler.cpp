@@ -41,6 +41,11 @@ string Alquiler::getclave()
     return vehiculo->getclave();
 }
 
+Vehiculo* Alquiler::getVeh()
+{
+    return vehiculo;
+}
+
 void Alquiler::setmonto()
 {
     try {
