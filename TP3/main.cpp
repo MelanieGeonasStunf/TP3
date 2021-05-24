@@ -16,6 +16,14 @@ int main()
 	miEmpresa->getlistaAlq()->ListarAlquileres(automovil);
 	delete miEmpresa;
 	system("pause");
+
+	/*
+	-UML
+	-Verificar eliminar vehiculo
+	-Excepciones
+	-Verificar Calcularmonto
+
+	*/
 }
 
 /*

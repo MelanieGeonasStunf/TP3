@@ -18,6 +18,7 @@ string Camioneta::tostring()
 string Camioneta::PasosMantenimiento()
 {
     string pasosMant = PasosMantenimientoVeh();
+    //string pasosMant = PasosMantenimientoVeh();
     pasosMant += "- Liquido limpiador de parabrisas \n- Lubricacion de chasis\n";
     return pasosMant;
 }

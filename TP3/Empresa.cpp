@@ -73,9 +73,11 @@ void Empresa::Retirar(Vehiculo* vehiculo)
 
 void Empresa::Mantenimiento(Vehiculo* vehiculo)
 {
-	vehiculo->PasosMantenimiento();
+	//se realiza un mantenimiento cada vez que se agrega un alquiler y cada vez que se adquiere un vehiculo
+	cout<<vehiculo->PasosMantenimiento();
 	vehiculo->setFechaUltMantenimiento();
 	//llama a la funcion de mantenimiento de cada vehiculo
+	
 }
 
 string Empresa::tostring()
