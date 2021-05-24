@@ -6,12 +6,6 @@
 
 using namespace std;
 
-/*template <class T>
-class cListaT;
-
-template<class T>
-ostream& operator<<(ostream& out,  cListaT <T>& object);*/
-
 template<class T>
 class cListaT
 {
@@ -46,9 +40,8 @@ public:
 
 	string toString();
 
-	//SOBRECARGA
+	//SOBRECARGAS
 	void operator+(T* miObjeto);
-	// friend ostream& operator<< <>(ostream& out,  cListaT & object);
 	T* operator[](unsigned int pos);
 };
 
@@ -237,7 +230,6 @@ template<class T>
 void operator<<(ostream& o, cListaT<T>& object)
 {
 	o << object.toString() << endl;
-	//return o;
 }
 
 template<class T>

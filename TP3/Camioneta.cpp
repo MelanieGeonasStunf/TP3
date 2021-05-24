@@ -17,6 +17,8 @@ string Camioneta::tostring()
 
 void Camioneta::PasosMantenimiento()
 {
+    string pasosMant = "- Liquido limpiador de parabrisas \n- Lubricacion de chasis";
+
 }
 
 float Camioneta::getprecioDia()

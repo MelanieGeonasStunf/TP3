@@ -15,7 +15,7 @@ Trafic::~Trafic()
 
 void Trafic::PasosMantenimiento()
 {
-    //
+    string pasosMant = "- Liquido limpiador de parabrisas \n- Limpieza de sensores\n- Lubricacion de chasis";
 }
 
 

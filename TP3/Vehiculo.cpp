@@ -30,21 +30,19 @@ void Vehiculo::PasosMantenimiento()
 	string pasosMant = " -Cambio de filtros y de aceite" + '\n' +
 		linea + '\n' +
 		"- Revision Neumáticos" + '\n' +
-		"Amortiguadores" + '\n' +
+		"- Amortiguadores" + '\n' +
 		"- Revision de las luces " + '\n' +
-		"-Correa del motor" + '\n' +
-		"Liquido de transmision automatica" + '\n' +
-		"Bateria y cables" + '\n' +
-		"Filtro de aire de la cabina" + '\n' +
-		"Lubricacion de chasis" + '\n' +
-		"Anticongelante" + '\n' +
-		"Fugas de escape" + '\n' +
-		"Sensor de oxigeno" + '\n' +
-		"Liquido de la direccion hidraulica" + '\n' +
-		"Bujias" + '\n' +
-		"Liquido limpiador de parabrisas" + '\n' +
-		"Limpieza y encerado" + '\n';
-	 
+		"- Correa del motor" + '\n' +
+		"- Liquido de transmision automatica" + '\n' +
+		"- Bateria y cables" + '\n' +
+		"- Filtro de aire de la cabina" + '\n' +
+		"- Anticongelante" + '\n' +
+		"- Fugas de escape" + '\n' +
+		"- Sensor de oxigeno" + '\n' +
+		"- Liquido de la direccion hidraulica" + '\n' +
+		"- Bujias" + '\n' +
+		"- Limpieza y encerado" + '\n';
+
 }
 
 string Vehiculo::getclave()

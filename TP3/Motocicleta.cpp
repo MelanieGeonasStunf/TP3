@@ -19,6 +19,8 @@ Motocicleta::~Motocicleta()
 
 void Motocicleta::PasosMantenimiento()
 {
+    string pasosMant = "- Lubricacion de las guayas";
+
 }
 
 string Motocicleta::tostring()
