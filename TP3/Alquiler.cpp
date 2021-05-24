@@ -20,13 +20,13 @@ Alquiler::~Alquiler()
 string Alquiler::tostring()
 {
     string cadena = "\nAlquiler: " + clave + '\n' +
-        "Cliente: " + cliente->tostring() +'\n' + 
-        "Vehiculo: " + vehiculo->tostring() + '\n' + 
-        "Fecha Inicio: " + to_string(FechaInicio.tm_mday) + '/' +
+        "  Cliente: " + cliente->tostring() + 
+        "  Vehiculo: " + vehiculo->tostring() + 
+        "  Fecha Inicio: " + to_string(FechaInicio.tm_mday) + '/' +
         to_string(FechaInicio.tm_mon) + '/' + to_string(FechaInicio.tm_year) + '\n'
-        + "Fecha Fin:" + to_string(FechaFin.tm_mday) + '/' +
+        + "  Fecha Fin:" + to_string(FechaFin.tm_mday) + '/' +
         to_string(FechaFin.tm_mon) + '/' + to_string(FechaFin.tm_year) + '\n' +
-        "Monto:" + to_string(monto);
+        "  Monto:" + to_string(monto)+'\n'+'\n';
 
     return cadena;
 }
@@ -38,7 +38,7 @@ Clientes* Alquiler::getCliente()
 
 string Alquiler::getclave()
 {
-    return clave;
+    return vehiculo->getclave();
 }
 
 void Alquiler::setmonto()

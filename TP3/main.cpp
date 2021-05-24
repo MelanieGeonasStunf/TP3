@@ -47,7 +47,8 @@ int main()
 		*lista + Alquiler1;
 	//*lista + Alquiler2;
 	//*lista + Alquiler3;*/
-	cout << *(miEmpresa->getlistaCli());
+	cout << *(miEmpresa->getlistaAlq());
+	miEmpresa->getlistaAlq()->ListarAlquileres(automovil);
 	//(miEmpresa->getListaVeh())->OrdenarAlquileres(moto);
 	/*for (int i = 0; i < lista->CA; i++)
 	{

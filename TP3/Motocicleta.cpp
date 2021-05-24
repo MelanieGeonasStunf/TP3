@@ -25,9 +25,9 @@ void Motocicleta::PasosMantenimiento()
 
 string Motocicleta::tostring()
 {
-    string cadena = "\nNumero Patente: " + numeroPatente + '\n' + "Color: " + color + '\n'
-        + "Numero Poliza: " + to_string(numeroPoliza) + '\n' + "Precio dia: " + to_string(preciodia) + '\n'
-        + "Capacidad: " + to_string(capacidad) + '\n';
+    string cadena = "\n\tNumero Patente: " + numeroPatente + '\n' +'\t' +"Color: " + color + '\n'+'\t'
+        + "Numero Poliza: " + to_string(numeroPoliza) + '\n' +'\t'+ "Precio dia: " + to_string(preciodia) + '\n'
+        +'\t'+ "Capacidad: " + to_string(capacidad) + '\n';
     return cadena;
 }
 

@@ -46,7 +46,7 @@ void Empresa::Alquilar(Alquiler* alquiler)
 	}
 	catch (Alquiler* Alquiler)
 	{
-		throw "No se pudo alquilar el alquiler: "+Alquiler->getclave()+'\n';
+		throw "No se pudo alquilar el vehiculo: "+Alquiler->getclave()+'\n';
 	}
 
 	//deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw

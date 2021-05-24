@@ -14,7 +14,7 @@ class cListaDeriv :
 public:
     cListaDeriv();
     ~cListaDeriv();
-   void OrdenarAlquileres(int vehiculoimprimir);
+   void ListarAlquileres(int vehiculoimprimir);
    int GananciaAuto();
    int GananciaMoto();
    int GananciaCamioneta();

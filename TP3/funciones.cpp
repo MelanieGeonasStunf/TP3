@@ -18,7 +18,7 @@ cListaT<Clientes>* ListandoClientes()
 {
 	cListaT<Clientes>* lista = new cListaT<Clientes>();
 	Clientes* cl1 = new Clientes("Damon Salvatore", "1000601");
-	*lista + cl1;
+	*lista + cl1;//poner excep
 	cl1 = new Clientes("Stefan Salvatore", "1033931");
 	*lista + cl1;
 	cl1 = new Clientes("Elena Gilbert", "40992310");
@@ -122,7 +122,6 @@ void ListandoVehiculos(Empresa*emp)
 		cout << "\nNo se pudo agregar el vehiculo " << v->getclave() << " a la lista." << endl;
 	}
 }
-
 void AlquilarVehiculo_(Empresa* Empresa_)
 {
 	/*- Las motocicletas pueden añadir el alquiler de uno o dos cascos.
@@ -148,7 +147,7 @@ pueden instalarse en el pasillo a forma de asiento auxiliar.*/
 			cout << exc << endl;
 		}
 		Alquiler1 = new Alquiler((*LC)[1], (*LV)[1], elemento1, elemento2, { 0,0,0,20,6,2021 },
-			{ 0,0,0,10,7,2021 }, "9234");//bool de elementos adicionales, no se reaiza
+			{ 0,0,0,10,7,2021 }, "9234");//no se reaiza, elementos de seguridad erroneos
 		try {
 			Empresa_->Alquilar(Alquiler1);
 		}
@@ -156,7 +155,7 @@ pueden instalarse en el pasillo a forma de asiento auxiliar.*/
 			cout << exc << endl;
 		}
 		Alquiler1 = new Alquiler((*LC)[2], (*LV)[2], elemento3, elemento2, { 00,00,00,11,05,2021 }
-		, { 00,00,00,23,01,2022 }, "505");
+		, { 00,00,00,23,01,2022 }, "505");//se alquila correctamente
 		try {
 			Empresa_->Alquilar(Alquiler1);
 		}
@@ -164,7 +163,47 @@ pueden instalarse en el pasillo a forma de asiento auxiliar.*/
 			cout << exc << endl;
 		}
 		Alquiler1 = new Alquiler((*LC)[3], (*LV)[3], elemento2, elemento4, { 00,00,00,11,05,2021 }
-		, { 00,00,00,10,04,2021 }, "505");//dias negativos
+		, { 00,00,00,10,04,2021 }, "501");//dias negativos
+		try {
+			Empresa_->Alquilar(Alquiler1);
+		}
+		catch (string exc) {
+			cout << exc << endl;
+		}
+		Alquiler1 = new Alquiler((*LC)[3], (*LV)[3], elemento2, elemento4, { 00,00,00,11,05,2021 }
+		, { 00,00,00,10,04,2022 }, "508");//mismo alquiler con distinta fecha
+		try {
+			Empresa_->Alquilar(Alquiler1);
+		}
+		catch (string exc) {
+			cout << exc << endl;
+		}
+		Alquiler1 = new Alquiler((*LC)[3], (*LV)[3], elemento2, elemento4, { 00,00,00,11,05,2021 }
+		, { 00,00,00,10,04,2022 }, "556");//alquiler repetido
+		try {
+			Empresa_->Alquilar(Alquiler1);
+		}
+		catch (string exc) {
+			cout << exc << endl;
+		}
+		Alquiler1 = new Alquiler((*LC)[4], (*LV)[4], elemento2,NULL, { 00,00,00,10,05,2021 }
+		, { 00,00,00,11,05,2021 }, "120");//alquilo 1 solo elemeneto de seguridad
+		try {
+			Empresa_->Alquilar(Alquiler1);
+		}
+		catch (string exc) {
+			cout << exc << endl;
+		}
+		Alquiler1 = new Alquiler((*LC)[5], (*LV)[5], NULL,NULL, { 00,00,00,10,8,2021 }
+		, { 00,00,00,1,9,2021 }, "123");//No alquila ningun elemento de seguridad
+		try {
+			Empresa_->Alquilar(Alquiler1);
+		}
+		catch (string exc) {
+			cout << exc << endl;
+		}
+		Alquiler1 = new Alquiler((*LC)[6], (*LV)[6], NULL, elemento2, { 00,00,00,10,8,2021 }
+		, { 00,00,00,1,9,2021 }, "222");//se realiza el alquiler
 		try {
 			Empresa_->Alquilar(Alquiler1);
 		}

@@ -8,20 +8,13 @@ cListaDeriv::~cListaDeriv()
 {
 }
 
-void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
+void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 {
-	Alquiler** motos = new Alquiler * [CA];
-	Alquiler** automoviles = new Alquiler * [CA];
-	Alquiler** camionetas = new Alquiler * [CA];
-	Alquiler** trafics = new Alquiler * [CA];
+	cListaT<Alquiler>* motos = new cListaT<Alquiler>(CA);
+	cListaT<Alquiler>* automoviles = new cListaT<Alquiler>(CA);
+	cListaT<Alquiler>* camionetas = new cListaT<Alquiler> (CA);
+	cListaT<Alquiler>*trafics = new cListaT<Alquiler>(CA);
 	int cant_motocicletas = 0, cant_automovil=0, cant_trafic = 0, cant_camioneta = 0;
-	for (int i = 0; i < CA; i++)
-	{
-		motos[i] = NULL;
-		trafics[i] = NULL;
-		automoviles[i] = NULL;
-		camionetas[i] = NULL;
-	}
 	switch (vehiculoimprimir)
 	{
 	case camioneta:
@@ -33,7 +26,7 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 			Camioneta* ptr = dynamic_cast<Camioneta*>(v);
 			if (ptr != NULL)
 			{
-				camionetas[cant_camioneta] = vector[i];
+				camionetas->vector[cant_camioneta] = vector[i];
 				cant_camioneta++;
 			}
 		}
@@ -43,12 +36,12 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 		for (int i = 0; i < CA; i++)
 		{
 			if (vector[i] == NULL || vector[i]->vehiculo == NULL)
-				return;
+				return;//excep
 			Vehiculo* v = vector[i]->vehiculo;
 			Automovil* ptr = dynamic_cast<Automovil*>(v);
 			if (ptr != NULL)
 			{
-				automoviles[cant_automovil] = vector[i];
+				automoviles->vector[cant_automovil] = vector[i];
 				cant_automovil++;
 			}
 		}
@@ -63,7 +56,7 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 			Trafic* ptr = dynamic_cast<Trafic*>(v);
 			if (ptr != NULL)
 			{
-				trafics[cant_trafic] = vector[i];
+				trafics->vector[cant_trafic] = vector[i];
 				cant_trafic++;
 			}
 		}
@@ -78,25 +71,13 @@ void cListaDeriv::OrdenarAlquileres(int vehiculoimprimir)
 			Motocicleta* ptr = dynamic_cast<Motocicleta*>(v);
 			if (ptr != NULL)
 			{
-				motos[cant_motocicletas] = vector[i];
+				motos->vector[cant_motocicletas] = vector[i];
 				cant_motocicletas++;
 			}
 		}
 		cout << *motos;
 		break;
 	}
-	for (int i = 0; i < CA; i++)
-	{
-		delete motos[i];
-		delete trafics[i];
-		delete automoviles[i];
-		delete camionetas[i];
-	}
-	delete[] motos;
-	delete[] trafics;
-	delete[] automoviles;
-	delete[] camionetas;
-
 }
 
 int cListaDeriv::GananciaAuto()
