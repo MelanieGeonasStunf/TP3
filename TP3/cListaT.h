@@ -117,11 +117,11 @@ bool cListaT<T>::AgregarItem(T * item)
 {
 
 	T *i_f = BuscarItem(item->getclave());
-	if (i_f != NULL)throw new exception("Ya se encuentra en la lista");
+	if (i_f != NULL)throw  1;//cambie para que sean numeros y hayan 2 opc
 
 	if (CA < TAM)
 		vector[CA++] = item;
-	else throw new exception("No hay tama�o suficiente para agregar el item");
+	else throw 2;
 	return true;
 }
 template<class T>
@@ -242,9 +242,22 @@ inline T* cListaT<T>::operator[](unsigned int pos)
 template<class T>
  inline void cListaT<T>::operator+( T* miObjeto)
 {
-	 if (AgregarItem(miObjeto) == false) 
-		 throw "No se pudo agregar.";
-	 
+	 bool ok;
+	 try {
+		 ok = AgregarItem(miObjeto);
+	 }
+	 catch (int num)
+	 {
+		 if (num == 1)
+			 throw miObjeto;
+		 if (num == 2) {
+			 Redimensionalizar();
+			 ok = AgregarItem(miObjeto);//no deberia saltar ninguna excepcion ya que las anteriores
+			 //se arregalron
+		 }
+	 }
+	 if (ok== false) 
+		 throw miObjeto;
 	 /*else
 		 return NULL;*/
 }

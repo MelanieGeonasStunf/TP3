@@ -17,36 +17,54 @@ cListaDeriv* Empresa::getlistaAlq()
 	return ListaAlquileres;
 }
 
+cListaT<Clientes>* Empresa::getlistaCli()
+{
+	return ListaClientes;
+}
+
+cListaT<Vehiculo>* Empresa::getListaVeh()
+{
+	return ListaVehiculos;
+}
+
 void Empresa::Alquilar(Alquiler* alquiler)
 {
 	try
 	{
-		if (ListaAlquileres[ListaAlquileres->CA].AgregarItem(alquiler)== true || 
-			ListaClientes[ListaClientes->CA].AgregarItem(alquiler->getCliente())==true)
-			return;
+		setMonto1(alquiler);
 	}
-	catch (exception)
+	catch (string ex)
 	{
-		throw new exception("No se pudo agregar el item a la lista");
+		throw ex;
+	}
+	try
+	{
+		*ListaAlquileres + alquiler;
+		/*if (ListaAlquileres[ListaAlquileres->CA].AgregarItem(alquiler)== true || 
+			ListaClientes[ListaClientes->CA].AgregarItem(alquiler->getCliente())==true)
+			return;*/
+	}
+	catch (Alquiler* Alquiler)
+	{
+		throw "No se pudo alquilar el alquiler: "+Alquiler->getclave()+'\n';
 	}
 
-	 //deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw
-	
-
+	//deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw
 }
 
-void Empresa::Adquirir(Vehiculo* vehiculo)
+void Empresa::Adquirir(Vehiculo* veh)
 {
 	// agrega un vehiculo lista vehiculos
 	//deberia igualarlo a algo pq retorna un booleano; y tambien tira un throw
 	try
 	{
-		if (ListaVehiculos[ListaVehiculos->CA].AgregarItem(vehiculo) == true)
-			return;
+		*ListaVehiculos + veh;
+		//if (ListaVehiculos[ListaVehiculos->CA].AgregarItem(vehiculo) == true)
+		return;
 	}
-	catch (exception)
+	catch (Vehiculo*veh)
 	{
-		throw new exception("No se pudo agregar el item a la lista");
+		throw veh;
 	}
 	
 }

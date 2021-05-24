@@ -61,6 +61,7 @@ void Alquiler::setmonto()
 
 int Alquiler::CalcularTiempo()
 {
+    string exc = "Fechas ingresadas no disponibles";
     FechaInicio.tm_year -= 1900;
     FechaFin.tm_year -= 1900;
 
@@ -70,8 +71,9 @@ int Alquiler::CalcularTiempo()
     time_t fin = mktime(fechaF);
     double difference = difftime(fin, inicio);
     int dif = difference;
-    if ((int)difference== 0)
-        throw "Fechas ingresadas no disponibles";
+    if (difference <= 0){
+        throw exc;
+    }
     int dias =(int)difference/86400;
     return dias;
 }
@@ -90,11 +92,15 @@ void Alquiler::VerificarTipo()
         if (moto != NULL && elemento1->getTipo() != 0)
             throw excep;
         Camioneta* cam = dynamic_cast<Camioneta*>(v);
-        if (cam != NULL && (elemento1->getTipo() !=1 || elemento1->getTipo()!=3 ))
-            throw excep;
+        if (cam != NULL && elemento1->getTipo() != 1) {
+            if (elemento1->getTipo() != 3)
+                throw excep;
+        }
         Trafic* traf = dynamic_cast<Trafic*>(v);
-        if (traf != NULL && (elemento1->getTipo() != 2 || elemento1->getTipo()!=3))
-            throw excep;
+        if (traf != NULL && elemento1->getTipo() != 1) {
+            if (elemento1->getTipo() != 2)
+                throw excep;
+        }
     }
     if (elemento2 != NULL)//en el caso que el elemento de seguridad 1 no concuerda con el vehiculo tira
         //la excepcion sin importar si el elemento 2 concuerda
@@ -107,11 +113,15 @@ void Alquiler::VerificarTipo()
         if (moto != NULL && elemento2->getTipo() != 0)
             throw excep;
         Camioneta* cam = dynamic_cast<Camioneta*>(v);
-        if (cam != NULL && (elemento2->getTipo() != 1 || elemento2->getTipo() != 3))
-            throw excep;
+        if (cam != NULL && elemento2->getTipo() != 1) {
+            if (elemento2->getTipo() != 3)
+                throw excep;
+        }
         Trafic* traf = dynamic_cast<Trafic*>(v);
-        if (traf != NULL && (elemento2->getTipo() != 2 || elemento2->getTipo() != 3))
-            throw excep;
+        if (traf != NULL && elemento2->getTipo() != 1) {
+            if (elemento2->getTipo() != 2)
+                throw excep;
+        }
     }
 }
 

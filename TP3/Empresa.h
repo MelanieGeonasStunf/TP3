@@ -20,7 +20,8 @@ public:
 	~Empresa();
 
 	cListaDeriv* getlistaAlq();
-
+	cListaT<Clientes>* getlistaCli();
+	cListaT<Vehiculo>* getListaVeh();
 	void Alquilar(Alquiler* alquiler);
 	void Adquirir(Vehiculo* vehiculo);
 	void Retirar(Vehiculo* vehiculo);
