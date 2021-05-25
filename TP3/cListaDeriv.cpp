@@ -32,6 +32,7 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			}
 		}
 		cout << *camionetas;
+		cout << "La ganancia total de los alquileres de las camionetas es de: $" << GananciaCamioneta() << endl;
 		break;
 	case automovil:
 		for (int i = 0; i < CA; i++)
@@ -48,6 +49,7 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			}
 		}
 		cout << *automoviles;
+		cout << "La ganancia total de los alquileres de los automoviles es de: $" << GananciaAuto() << endl;
 		break;
 	case trafic:
 		for (int i = 0; i < CA; i++)
@@ -64,6 +66,7 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			}
 		}
 		cout << *trafics;
+		cout << "La ganancia total de los alquileres de los trafic es de: $" << GananciaTrafic() << endl;
 		break;
 	case moto:
 		for (int i = 0; i < CA; i++)
@@ -80,6 +83,7 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			}
 		}
 		cout << *motos;
+		cout << "La ganancia total de los alquileres de las motos es de: $" << GananciaMoto() << endl;
 		break;
 	}
 }

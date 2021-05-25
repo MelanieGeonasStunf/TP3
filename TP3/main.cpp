@@ -13,7 +13,7 @@ int main()
 	ListandoVehiculos(miEmpresa);
 	AlquilarVehiculo_(miEmpresa);
 	cout << *(miEmpresa->getlistaAlq());
-	miEmpresa->getlistaAlq()->ListarAlquileres(automovil);
+	miEmpresa->getlistaAlq()->ListarAlquileres(trafic);
 	delete miEmpresa;
 	system("pause");
 
