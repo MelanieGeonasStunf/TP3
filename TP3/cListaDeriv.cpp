@@ -43,12 +43,13 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			Automovil* ptr = dynamic_cast<Automovil*>(v);
 			if (ptr != NULL)
 			{
-				automoviles->vector[cant_automovil] = vector[i];
+				automoviles->vector[cant_automovil] = this->vector[i];
 				cant_automovil++;
 				automoviles->CA = cant_automovil;
 			}
 		}
 		cout << *automoviles;
+		break;
 	case trafic:
 		for (int i = 0; i < CA; i++)
 		{

@@ -10,7 +10,7 @@ void setMonto1(Alquiler*& alquiler)
 	catch (string excep)
 	{
 		//cout << excep;
-		alquiler = NULL;
+		delete alquiler;
 		throw excep;
 	}
 }
@@ -210,20 +210,6 @@ pueden instalarse en el pasillo a forma de asiento auxiliar.*/
 	if (Empresa_ != NULL) {
 		cListaT<Clientes>* LC = Empresa_->getlistaCli();
 		cListaT<Vehiculo>* LV = Empresa_->getListaVeh();
-
-		//retirar vehiculo
-		try {
-			Vehiculo* retirado = Empresa_->Retirar((*LV)[0]);
-			if (retirado != NULL) {
-				cout << "\nSe ha retirado el vehiculo: " << retirado->getclave() << endl;
-				delete retirado;
-			}
-		}
-		catch (string ex)
-		{
-			cout << ex << endl;
-		}
-		//------------------------------------------------------------------------------
 		Alquiler* Alquiler1 = new Alquiler((*LC)[0], (*LV)[0], elemento1, elemento2, { 00,00,00,15,02,2021 }
 		, { 00,00,00,20,02,2021 }, "1234");//1 mes, no se realiza el alquiler
 		try {
@@ -297,5 +283,18 @@ pueden instalarse en el pasillo a forma de asiento auxiliar.*/
 			cout << 
 				exc << endl;
 		}
+		//retirar vehiculo
+		try {
+			Vehiculo* retirado = Empresa_->Retirar((*LV)[0]);
+			if (retirado != NULL) {
+				cout << "\nSe ha retirado el vehiculo: " << retirado->getclave() << endl;
+				delete retirado;
+			}
+		}
+		catch (string ex)
+		{
+			cout << ex << endl;
+		}
+		//------------------------------------------------------------------------------
 	}
 }
