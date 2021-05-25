@@ -14,6 +14,7 @@ void setMonto1(Alquiler*& alquiler)
 		throw excep;
 	}
 }
+
 cListaT<Clientes>* ListandoClientes()
 {
 	cListaT<Clientes>* lista = new cListaT<Clientes>();
@@ -100,6 +101,7 @@ cListaT<Clientes>* ListandoClientes()
 	}
 	return lista;
 }
+
 void ListandoVehiculos(Empresa*emp)
 { 
 	Automovil* auto1 = new Automovil("MZU789", "Blanco", 1212, 11234, 5);
@@ -183,7 +185,16 @@ void ListandoVehiculos(Empresa*emp)
 	{
 		cout << "\nNo se pudo agregar el vehiculo " << v->getclave() << " a la lista." << endl;
 	}
+	try {
+		emp->Adquirir(moto1);//pruebo repetido
+	}
+	catch (Vehiculo* v)
+	{
+		cout << "\nNo se pudo agregar el vehiculo " << v->getclave() << " a la lista." << endl;
+	}
+	
 }
+
 void AlquilarVehiculo_(Empresa* Empresa_)
 {
 	/*- Las motocicletas pueden añadir el alquiler de uno o dos cascos.
@@ -200,6 +211,19 @@ pueden instalarse en el pasillo a forma de asiento auxiliar.*/
 		cListaT<Clientes>* LC = Empresa_->getlistaCli();
 		cListaT<Vehiculo>* LV = Empresa_->getListaVeh();
 
+		//retirar vehiculo
+		try {
+			Vehiculo* retirado = Empresa_->Retirar((*LV)[0]);
+			if (retirado != NULL) {
+				cout << "\nSe ha retirado el vehiculo: " << retirado->getclave() << endl;
+				delete retirado;
+			}
+		}
+		catch (string ex)
+		{
+			cout << ex << endl;
+		}
+		//------------------------------------------------------------------------------
 		Alquiler* Alquiler1 = new Alquiler((*LC)[0], (*LV)[0], elemento1, elemento2, { 00,00,00,15,02,2021 }
 		, { 00,00,00,20,02,2021 }, "1234");//1 mes, no se realiza el alquiler
 		try {
@@ -270,7 +294,8 @@ pueden instalarse en el pasillo a forma de asiento auxiliar.*/
 			Empresa_->Alquilar(Alquiler1);
 		}
 		catch (string exc) {
-			cout << exc << endl;
+			cout << 
+				exc << endl;
 		}
 	}
 }

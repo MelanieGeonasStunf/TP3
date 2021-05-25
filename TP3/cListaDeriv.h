@@ -19,6 +19,6 @@ public:
    int GananciaMoto();
    int GananciaCamioneta();
    int GananciaTrafic();
-   int GananciaTotal(int TarifaAuto, int TarifaMoto, int TarifaCam, int TarifaTrafic);
+   int GananciaTotal();
    //int CalcTarif();
 };

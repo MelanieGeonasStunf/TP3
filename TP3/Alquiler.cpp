@@ -15,6 +15,11 @@ Alquiler::Alquiler(Clientes* cliente, Vehiculo* vehiculo, cElementosSeg* element
 
 Alquiler::~Alquiler()
 {
+   /* if (elemento1 != NULL)
+        delete elemento1;
+    if (elemento2 != NULL)
+        delete elemento2;*/
+
 }
 
 string Alquiler::tostring()

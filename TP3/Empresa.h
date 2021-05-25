@@ -24,7 +24,7 @@ public:
 	cListaT<Vehiculo>* getListaVeh();
 	void Alquilar(Alquiler* alquiler);
 	void Adquirir(Vehiculo* vehiculo);
-	void Retirar(Vehiculo* vehiculo);
+	Vehiculo* Retirar(Vehiculo* vehiculo);
 	void Mantenimiento(Vehiculo* vehiculo);
 	string tostring();
 };

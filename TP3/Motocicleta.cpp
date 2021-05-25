@@ -15,7 +15,7 @@ Motocicleta::~Motocicleta()
 string Motocicleta::PasosMantenimiento()
 {
     string pasosMant = PasosMantenimientoVeh();
-    pasosMant += "- Lubricacion de las guayas\n";
+    pasosMant += "- Lubricacion de las guayas\n"+'\n';
     return pasosMant;
 }
 

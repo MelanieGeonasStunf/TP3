@@ -30,8 +30,8 @@ string Vehiculo::getclave()
 
 string Vehiculo::PasosMantenimientoVeh()
 {
-	string linea = "\n- Revision de frenos";
-	string pasosMant = "\t- Cambio de filtros y de aceite" + '\n' +
+	string linea = "- Revision de frenos";
+	string pasosMant = "\n\n\t\t\t\t\t     ---PASOS MANTENIMIENTO---\n\n- Cambio de filtros y de aceite" + '\n' +
 		linea + '\n' +
 		"- Revision Neumaticos" + '\n' +
 		"- Amortiguadores" + '\n' +

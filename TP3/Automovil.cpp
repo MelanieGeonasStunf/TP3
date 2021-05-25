@@ -14,7 +14,7 @@ Automovil::~Automovil()
 string Automovil::PasosMantenimiento()
 {
     string pasosMant = PasosMantenimientoVeh();
-    pasosMant += "- Liquido limpiador de parabrisas\n- Lubricacion de chasis\n";
+    pasosMant += "- Liquido limpiador de parabrisas\n- Lubricacion de chasis\n"+'\n';
     return pasosMant;
 }
 

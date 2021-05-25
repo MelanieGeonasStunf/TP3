@@ -32,7 +32,7 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			}
 		}
 		cout << *camionetas;
-		cout << "La ganancia total de los alquileres de las camionetas es de: $" << GananciaCamioneta() << endl;
+		//cout << "La ganancia total de los alquileres de las camionetas es de: $" << GananciaCamioneta() << endl;
 		break;
 	case automovil:
 		for (int i = 0; i < CA; i++)
@@ -49,8 +49,6 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			}
 		}
 		cout << *automoviles;
-		cout << "La ganancia total de los alquileres de los automoviles es de: $" << GananciaAuto() << endl;
-		break;
 	case trafic:
 		for (int i = 0; i < CA; i++)
 		{
@@ -66,7 +64,7 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			}
 		}
 		cout << *trafics;
-		cout << "La ganancia total de los alquileres de los trafic es de: $" << GananciaTrafic() << endl;
+		//cout << "La ganancia total de los alquileres de los trafic es de: $" << GananciaTrafic() << endl;
 		break;
 	case moto:
 		for (int i = 0; i < CA; i++)
@@ -83,7 +81,7 @@ void cListaDeriv::ListarAlquileres(int vehiculoimprimir)
 			}
 		}
 		cout << *motos;
-		cout << "La ganancia total de los alquileres de las motos es de: $" << GananciaMoto() << endl;
+		//cout << "La ganancia total de los alquileres de las motos es de: $" << GananciaMoto() << endl;
 		break;
 	}
 }
@@ -156,9 +154,14 @@ int cListaDeriv::GananciaTrafic()
 	return Tarifa;
 }
 
-int cListaDeriv::GananciaTotal(int TarifaAuto, int TarifaMoto, int TarifaCam, int TarifaTrafic)
+int cListaDeriv::GananciaTotal()
 {
-	int TarifaTotal = TarifaAuto + TarifaMoto + TarifaCam + TarifaTrafic;
+	int TarifaTotal = 0;
+	for (int i = 0; i <CA;  i++)
+	{
+		TarifaTotal += vector[i]->monto;
+	}
+	//int TarifaTotal = TarifaAuto + TarifaMoto + TarifaCam + TarifaTrafic;
 	return TarifaTotal;
 }
 

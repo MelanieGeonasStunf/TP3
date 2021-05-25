@@ -147,8 +147,18 @@ T* cListaT<T>::Quitar(string clave) {
 template<class T>
 T* cListaT<T>::Quitar(T *item) {
 	unsigned int pos = getItemPos(item->getclave());
+	T* objeto;
 	if (pos >= CA)return NULL;
-	return QuitarenPos(pos);
+	try
+	{
+		objeto = QuitarenPos(pos);
+	}
+	catch (string excep)
+	{
+		objeto = NULL;
+		throw excep;
+	}
+	return objeto;
 }
 template<class T>
 T* cListaT<T>::QuitarenPos(unsigned int pos) {

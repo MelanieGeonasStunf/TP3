@@ -10,6 +10,9 @@ Empresa::Empresa(cListaT<Vehiculo>* ListaVehiculos, cListaT<Clientes>* ListaClie
 
 Empresa::~Empresa()
 {
+	delete ListaClientes;
+	delete ListaVehiculos;
+	delete ListaAlquileres;
 }
 
 cListaDeriv* Empresa::getlistaAlq()
@@ -65,10 +68,18 @@ void Empresa::Adquirir(Vehiculo* veh)
 	
 }
 
-void Empresa::Retirar(Vehiculo* vehiculo)
+Vehiculo*  Empresa::Retirar(Vehiculo* vehiculo)
 {
+	Vehiculo* veh=NULL;
 	// quita vehiculo lista vehiculos
-	ListaVehiculos[ListaVehiculos->CA].Quitar(vehiculo);
+	try {
+		veh = ListaVehiculos->Quitar(vehiculo);
+	}
+	catch (string exep)
+	{
+		throw exep;
+	}
+	return veh;
 }
 
 void Empresa::Mantenimiento(Vehiculo* vehiculo)
