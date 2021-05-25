@@ -40,6 +40,14 @@ int main()
 	-Verificar eliminar vehiculo
 	-Excepciones
 	*/
+
+	//BOLUDECES:
+	/*
+	-capacidad-> const int
+	-UML:
+		-Alquiler-> ponemos cosas con*?
+
+	*/
 }
 
 /*

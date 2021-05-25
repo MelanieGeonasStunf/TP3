@@ -28,9 +28,9 @@ string Alquiler::tostring()
         "  Cliente: " + cliente->tostring() + 
         "  Vehiculo: " + vehiculo->tostring() + 
         "  Fecha Inicio: " + to_string(FechaInicio.tm_mday) + '/' +
-        to_string(FechaInicio.tm_mon) + '/' + to_string(FechaInicio.tm_year) + '\n'
+        to_string(FechaInicio.tm_mon) + '/' + to_string(FechaInicio.tm_year+1900) + '\n'
         + "  Fecha Fin:" + to_string(FechaFin.tm_mday) + '/' +
-        to_string(FechaFin.tm_mon) + '/' + to_string(FechaFin.tm_year) + '\n' +
+        to_string(FechaFin.tm_mon) + '/' + to_string(FechaFin.tm_year+1900) + '\n' +
         "  Monto:" + to_string(monto)+'\n'+'\n';
 
     return cadena;
